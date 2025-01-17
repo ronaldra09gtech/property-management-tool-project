@@ -1,27 +1,28 @@
 name: mobile
-
-description: "Property Search Application"
+description: Property Management Tool Mobile App for Public User Client.
 
 publish_to: 'none'
-
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.1
+  sdk: '>=3.1.5 <4.0.0'
 
+
+
+#--------------- PACKAGES ------------------#
 dependencies:
   flutter:
     sdk: flutter
 
   # Utility Packages
-  http: ^1.2.2
+  http: ^1.2.1
   intl: ^0.20.1
   logger: ^2.5.0
   url_launcher: ^6.3.1
   flutter_native_splash: ^2.4.4
   smooth_page_indicator: ^1.2.0+3
   connectivity_plus: ^6.1.2
-  lottie: ^3.3.1
+  lottie: ^3.3.1 # OR RIVE
 
   # Icons
   iconsax: ^0.0.8
@@ -43,10 +44,16 @@ dependencies:
   cloud_firestore: ^5.6.1
   firebase_storage: ^12.4.0
 
+
+
+  #--------------- ./ PACKAGES END ------------------#
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^5.0.0
+
 
 flutter:
   uses-material-design: true
