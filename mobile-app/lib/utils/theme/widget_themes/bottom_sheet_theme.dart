@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/utils/constants/colors.dart';
+import 'package:tranquilestate/utils/constants/colors.dart';
 
 class TBottomSheetTheme {
   TBottomSheetTheme._();

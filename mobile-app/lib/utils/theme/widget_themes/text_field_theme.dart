@@ -1,8 +1,7 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
-import 'package:mobile/utils/constants/colors.dart';
-import 'package:mobile/utils/constants/sizes.dart';
+import 'package:tranquilestate/utils/constants/colors.dart';
+import 'package:tranquilestate/utils/constants/sizes.dart';
 
 class TTextFormFieldTheme {
   TTextFormFieldTheme._();

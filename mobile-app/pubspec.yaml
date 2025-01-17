@@ -1,4 +1,4 @@
-name: mobile
+name: tranquilestate
 description: Property Management Tool Mobile App for Public User Client.
 
 publish_to: 'none'
@@ -6,8 +6,6 @@ version: 1.0.0+1
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
-
-
 
 #--------------- PACKAGES ------------------#
 dependencies:
