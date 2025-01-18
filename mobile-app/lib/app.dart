@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:tranquilestate/feature/authentication/screens/onboarding.dart';
+import 'package:tranquilestate/feature/authentication/screens/onboarding/onboarding.dart';
 import 'package:tranquilestate/utils/constants/text_strings.dart';
 import 'package:tranquilestate/utils/theme/theme.dart';
 
