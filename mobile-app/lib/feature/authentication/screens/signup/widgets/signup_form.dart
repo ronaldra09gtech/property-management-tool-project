@@ -5,7 +5,6 @@ import 'package:tranquilestate/feature/authentication/screens/signup/verify_emai
 import 'package:tranquilestate/feature/authentication/screens/signup/widgets/terms_condition_checkbox.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/constants/text_strings.dart';
-import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
 class TSignupForm extends StatelessWidget {
   const TSignupForm({
