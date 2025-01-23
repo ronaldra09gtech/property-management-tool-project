@@ -13,15 +13,11 @@ class TImages {
   static const String facebook = "assets/logos/facebook-icon.png";
 
   // -- Category Icons
-  static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
-  static const String clothIcon = "assets/icons/categories/icons8-tailors-dummy-64.png";
-  static const String shoeIcon = "assets/icons/categories/icons8-shoes-64.png";
-  static const String cosmeticsIcon = "assets/icons/categories/icons8-cosmetics-64.png";
-  static const String animalIcon = "assets/icons/categories/icons8-dog-heart-64.png";
-  static const String toyIcon = "assets/icons/categories/icons8-wooden-toy-car-50.png";
-  static const String furnitureIcon = "assets/icons/categories/icons8-dining-chair-64.png";
-  static const String jeweleryIcon = "assets/icons/categories/icons8-sparkling-diamond-64.png";
-  static const String electronicsIcon = "assets/icons/categories/icons8-smartphone-64.png";
+  static const String residential = "assets/icons/categories/home.png";
+  static const String commercial = "assets/icons/categories/buildings.png";
+  static const String industrial = "assets/icons/categories/factory.png";
+  static const String land = "assets/icons/categories/field.png";
+  static const String specialPurpose = "assets/icons/categories/warehouse.png";
 
   // -- Brand Icons
   static const String nikeLogo = "assets/icons/brands/nike.png";
