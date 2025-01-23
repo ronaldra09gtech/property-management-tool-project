@@ -6,6 +6,7 @@ import 'package:tranquilestate/common/widgets/custom_shapes/search_container.dar
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/home_appbar.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/home_categories.dart';
+import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -41,6 +42,13 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Container(
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(TSizes.md)),
+              child: const Image(
+                image: AssetImage(TImages.promoBanner1),
               ),
             ),
           ],
