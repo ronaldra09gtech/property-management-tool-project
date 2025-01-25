@@ -6,7 +6,7 @@ import 'package:tranquilestate/common/widgets/custom_shapes/search_container.dar
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/home_appbar.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/home_categories.dart';
-import 'package:tranquilestate/utils/constants/image_strings.dart';
+import 'package:tranquilestate/feature/showroom/screens/home/widgets/promo_slider.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,14 +21,14 @@ class HomeScreen extends StatelessWidget {
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  const THomeAppBar(),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  THomeAppBar(),
+                  SizedBox(height: TSizes.spaceBtwSections),
                   TSearchContainer(
                     text: 'Search Property',
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  SizedBox(height: TSizes.spaceBtwSections),
                   Padding(
-                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
                         TSectionHeading(
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                           showActionButton: false,
                           textColor: Colors.white,
                         ),
-                        const SizedBox(height: TSizes.spaceBtwItems),
+                        SizedBox(height: TSizes.spaceBtwItems),
                         THomeCategories(),
                       ],
                     ),
@@ -44,13 +44,10 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              decoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(TSizes.md)),
-              child: const Image(
-                image: AssetImage(TImages.promoBanner1),
-              ),
-            ),
+            Padding(
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(),
+            )
           ],
         ),
       ),
