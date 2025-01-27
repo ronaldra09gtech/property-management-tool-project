@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter, avoid_print
+
 import 'dart:html' as html;
 import 'dart:io';
 
