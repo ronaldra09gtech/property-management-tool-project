@@ -9,7 +9,7 @@ class TGridLayout extends StatelessWidget {
     super.key,
     required this.itemCount,
     required this.itemBuilder,
-    this.mainAxisExtent = 280
+    this.mainAxisExtent = 288
   });
 
   final int itemCount;
@@ -27,7 +27,7 @@ class TGridLayout extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: TSizes.gridViewSpacing,
           mainAxisSpacing: TSizes.gridViewSpacing,
-          mainAxisExtent: 280,
+          mainAxisExtent: mainAxisExtent,
         ),
         itemBuilder: itemBuilder,
     );

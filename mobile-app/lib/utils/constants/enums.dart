@@ -6,7 +6,7 @@
 
 
 /// Switch of Custom Brand-Text-Size Widget
-enum TextSizes { small, medium, large }
+enum TextSizes { small, medium, large, xs }
 
 enum OrderStatus { processing, shipped, delivered }
 

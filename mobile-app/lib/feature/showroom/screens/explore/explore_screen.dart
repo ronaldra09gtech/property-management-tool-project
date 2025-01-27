@@ -1,0 +1,139 @@
+import 'package:flutter/material.dart';
+import 'package:tranquilestate/common/widgets/appbar/appbar.dart';
+import 'package:tranquilestate/common/widgets/appbar/tabbar.dart';
+import 'package:tranquilestate/common/widgets/custom_shapes/containers/proeperty_card.dart';
+import 'package:tranquilestate/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:tranquilestate/common/widgets/custom_shapes/search_container.dart';
+import 'package:tranquilestate/common/widgets/images/t_circular_image.dart';
+import 'package:tranquilestate/common/widgets/layouts/grid_layout.dart';
+import 'package:tranquilestate/common/widgets/property/property_cards/property_card_horizontal.dart';
+import 'package:tranquilestate/common/widgets/property/property_cards/property_card_vertical.dart';
+import 'package:tranquilestate/common/widgets/text/section_heading.dart';
+import 'package:tranquilestate/common/widgets/text/tproperty_with_verification_icon.dart';
+import 'package:tranquilestate/utils/constants/colors.dart';
+import 'package:tranquilestate/utils/constants/enums.dart';
+import 'package:tranquilestate/utils/constants/image_strings.dart';
+import 'package:tranquilestate/utils/constants/sizes.dart';
+import 'package:tranquilestate/utils/helpers/helper_functions.dart';
+
+class ExploreScreen extends StatelessWidget {
+  const ExploreScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        appBar: TAppBar(
+          title: Text(
+            'Explore',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+        ),
+        body: NestedScrollView(
+          headerSliverBuilder: (_, innerBoxISScrolled) {
+            return [
+              SliverAppBar(
+                automaticallyImplyLeading: false,
+                pinned: true,
+                floating: true,
+                backgroundColor: THelperFunctions.isDarkMode(context)
+                    ? TColors.black
+                    : TColors.white,
+                expandedHeight: 440,
+                flexibleSpace: Padding(
+                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  child: ListView(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    children: [
+                      SizedBox(
+                        height: TSizes.spaceBtwItems,
+                      ),
+                      TSearchContainer(
+                        text: 'Explore',
+                        showborder: true,
+                        showBackground: false,
+                        padding: EdgeInsets.zero,
+                      ),
+                      SizedBox(
+                        height: TSizes.spaceBtwSections,
+                      ),
+                      TSectionHeading(title: 'Real Estate', onPressed: () {}),
+                      SizedBox(
+                        height: TSizes.spaceBtwItems / 1.5,
+                      ),
+                      TGridLayout(
+                          itemCount: 4,
+                          mainAxisExtent: 80,
+                          itemBuilder: (_, index) {
+                            return const TPropertyCard(showBorder: false);
+                          }),
+                    ],
+                  ),
+                ),
+                bottom: const TTabBar(
+                    tabs: [
+                      Tab(child: Text('Residential')),
+                      Tab(child: Text('Commercial')),
+                      Tab(child: Text('Industrial')),
+                      Tab(child: Text('Land')),
+                      Tab(child: Text('Special Purpose'))
+                    ]
+                ),
+              )
+            ];
+          },
+          body: TabBarView(
+              children: [
+                Padding(padding: const EdgeInsets.all(TSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    TPropertyShowcase(),
+                  ],
+                ),
+                )
+              ]
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class TPropertyShowcase extends StatelessWidget {
+  const TPropertyShowcase({
+    super.key,
+    required this.images;
+  });
+  final List<String> images;
+
+  @override
+  Widget build(BuildContext context) {
+    return TRoundedContainer(
+      showBorder: true,
+      borderColor: TColors.darkGrey,
+      backgroundColor: Colors.transparent,
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      child: Column(
+        children: [
+          const TPropertyCard(
+            showBorder: false,
+          ),
+          Row(children: images.map((image)=> PropertyTopProductImageWidget(image, context)).toList()),
+        ],
+      ),
+    );
+  }
+  Widget PropertyTopProductImageWidget(String images, context){
+    return Expanded(
+      child: TRoundedContainer(
+        height: 100,
+        backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkGrey : TColors.light,
+        margin: const EdgeInsets.only(right: TSizes.sm),
+        padding: const EdgeInsets.all(TSizes.md),
+        child: const Image(fit: BoxFit.contain, image: AssetImage(TImages.productImage2),),
+      ),
+    );
+  }
+}

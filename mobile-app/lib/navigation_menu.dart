@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tranquilestate/feature/showroom/screens/explore/explore_screen.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/home.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
@@ -29,9 +30,9 @@ class NavigationMenu extends StatelessWidget {
               : TColors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
-            NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
+            NavigationDestination(icon: Icon(Iconsax.activity), label: "Explore"),
             NavigationDestination(icon: Icon(Iconsax.heart), label: "Wishlist"),
-            NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
+            NavigationDestination(icon: Icon(Iconsax.user), label: "Account"),
           ],
         ),
       ),
@@ -45,6 +46,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
+    const ExploreScreen(),
     Container(color: Colors.purple),
     Container(color: Colors.orange),
     Container(color: Colors.blue),

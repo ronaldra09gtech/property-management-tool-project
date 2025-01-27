@@ -75,7 +75,7 @@ class TPropertyCardVartical extends StatelessWidget {
                     children: [
                       Text('Robinsosn Land Corp.',
                           overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
+                          maxLines: 2,
                           style: Theme.of(context).textTheme.labelMedium),
                       const SizedBox(width: TSizes.xs),
                       Icon(Iconsax.verify5,
