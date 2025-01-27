@@ -3,10 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/search_container.dart';
+import 'package:tranquilestate/common/widgets/layouts/grid_layout.dart';
+import 'package:tranquilestate/common/widgets/property/property_cards/property_card_vertical.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/home_appbar.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/home_categories.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/widgets/promo_slider.dart';
+import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -32,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         TSectionHeading(
-                          title: 'Popular Categories',
+                          title: 'Category',
                           showActionButton: false,
                           textColor: Colors.white,
                         ),
@@ -46,7 +49,19 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(),
+              child: Column(
+                children: [
+                  TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3
+                    ],
+                  ),
+                  SizedBox(height: TSizes.spaceBtwSections),
+                  TGridLayout(itemCount: 2, itemBuilder: (_, index) => const TPropertyCardVartical())
+                ],
+              ),
             )
           ],
         ),

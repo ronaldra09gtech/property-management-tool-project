@@ -13,7 +13,7 @@ class THomeCategories extends StatelessWidget {
       height: 80,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 5,
+        itemCount: 4,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
           return TVerticalImageText(
@@ -23,6 +23,7 @@ class THomeCategories extends StatelessWidget {
           );
         },
       ),
+
     );
   }
 }

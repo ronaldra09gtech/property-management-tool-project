@@ -2,16 +2,18 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/circular_container.dart';
-import 'package:tranquilestate/common/widgets/t_rounded_image.dart';
+import 'package:tranquilestate/common/widgets/images/t_rounded_image.dart';
 import 'package:tranquilestate/feature/showroom/controller/home_controller.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
-import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
 class TPromoSlider extends StatelessWidget {
   const TPromoSlider({
     super.key,
+    required this.banners,
   });
+
+  final List<String> banners;
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +25,7 @@ class TPromoSlider extends StatelessWidget {
               viewportFraction: 1,
               onPageChanged: (index, _) =>
                   controller.updatePageIndicator(index)),
-          items: [
-            TRoundedImage(imageUrl: TImages.promoBanner1),
-            TRoundedImage(imageUrl: TImages.promoBanner2),
-            TRoundedImage(imageUrl: TImages.promoBanner3),
-          ],
+          items: banners.map((url) => TRoundedImage(imageUrl: url)).toList(),
         ),
         const SizedBox(height: TSizes.spaceBtwItems),
         Center(
