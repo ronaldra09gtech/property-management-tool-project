@@ -10,7 +10,7 @@
 analyzer:
   errors:
     unreachable_switch_case: ignore ignore ignore ignore ignore ignore
-    deprecated_member_use: ignore ignore
+    deprecated_member_use: ignore ignore ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

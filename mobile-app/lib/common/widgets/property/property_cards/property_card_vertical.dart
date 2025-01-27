@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, unnecessary_string_escapes
+
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tranquilestate/common/styles/shadows.dart';
