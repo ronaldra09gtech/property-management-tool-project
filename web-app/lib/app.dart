@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tranquilestate_admin_panel/common/widgets/layouts/templates/site_layout.dart';
 import 'package:tranquilestate_admin_panel/routes/app_routes.dart';
 import 'package:tranquilestate_admin_panel/routes/routes.dart';
 import 'utils/constants/text_strings.dart';
@@ -26,37 +25,5 @@ class App extends StatelessWidget {
                 ),
               )),
     );
-  }
-}
-
-class ResponsiveDesignScreen extends StatelessWidget {
-  const ResponsiveDesignScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return TSiteTemplate(
-      useLayout: false,
-      desktop: Desktop(),
-      tablet: Tablet(),
-      mobile: Mobile(),
-    );
-  }
-}
-
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-
-class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

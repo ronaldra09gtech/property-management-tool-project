@@ -1,11 +1,11 @@
 {
-    "name": "yt_ecommerce_admin_panel",
-    "short_name": "yt_ecommerce_admin_panel",
+    "name": "TranquilEstate Management",
+    "short_name": "TranquilEstate",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Realty Property Management Tool",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
