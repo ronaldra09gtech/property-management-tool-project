@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tranquilestate/feature/showroom/screens/explore/explore_screen.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/home.dart';
+import 'package:tranquilestate/feature/showroom/screens/wishlist/wish_list.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
@@ -47,8 +48,7 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const ExploreScreen(),
-    Container(color: Colors.purple),
-    Container(color: Colors.orange),
+    const FavouriteScreen(),
     Container(color: Colors.blue),
   ];
 }
