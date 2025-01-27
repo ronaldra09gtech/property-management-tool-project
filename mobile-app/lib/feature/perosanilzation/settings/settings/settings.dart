@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tranquilestate/common/widgets/appbar/appbar.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tranquilestate/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
+import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile.dart';
 import 'package:tranquilestate/feature/perosanilzation/settings/profile/user_profile.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
@@ -23,8 +25,7 @@ class SettingScreen extends StatelessWidget {
                   children: [
                    TAppBar(title: Text('Account',
                     style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white))),
-                    SizedBox(height: TSizes.spaceBtwItems),
-                    const TUserProfile(),
+                    TUserProfile(onPressed: () => Get.to(() => const ProfileScreen())),
                     const SizedBox(height: TSizes.spaceBtwSections,)
                   ],
                 ),
