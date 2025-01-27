@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tranquilestate/feature/perosanilzation/settings/settings/settings.dart';
 import 'package:tranquilestate/feature/showroom/screens/explore/explore_screen.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/home.dart';
 import 'package:tranquilestate/feature/showroom/screens/wishlist/wish_list.dart';
@@ -49,6 +50,6 @@ class NavigationController extends GetxController {
     const HomeScreen(),
     const ExploreScreen(),
     const FavouriteScreen(),
-    Container(color: Colors.blue),
+    const SettingScreen(),
   ];
 }
