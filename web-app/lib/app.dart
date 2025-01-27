@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tranquilestate_admin_panel/common/widgets/layouts/templates/site_layout.dart';
-import 'utils/constants/colors.dart';
+import 'package:tranquilestate_admin_panel/routes/app_routes.dart';
+import 'package:tranquilestate_admin_panel/routes/routes.dart';
 import 'utils/constants/text_strings.dart';
-import 'utils/device/web_material_scroll.dart';
 import 'utils/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -17,7 +17,7 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       getPages: TAppRoute.pages,
-      initialRoute: TRoutes.responsiveDesignScreen,
+      initialRoute: TRoutes.login,
       unknownRoute: GetPage(
           name: '/page-not-found',
           page: () => const Scaffold(
