@@ -4,14 +4,10 @@ import 'package:tranquilestate/common/widgets/appbar/tabbar.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/proeperty_card.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/search_container.dart';
-import 'package:tranquilestate/common/widgets/images/t_circular_image.dart';
 import 'package:tranquilestate/common/widgets/layouts/grid_layout.dart';
-import 'package:tranquilestate/common/widgets/property/property_cards/property_card_horizontal.dart';
-import 'package:tranquilestate/common/widgets/property/property_cards/property_card_vertical.dart';
+import 'package:tranquilestate/common/widgets/property/property_cards/category_tab.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
-import 'package:tranquilestate/common/widgets/text/tproperty_with_verification_icon.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
-import 'package:tranquilestate/utils/constants/enums.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
@@ -86,13 +82,11 @@ class ExploreScreen extends StatelessWidget {
           },
           body: TabBarView(
               children: [
-                Padding(padding: const EdgeInsets.all(TSizes.defaultSpace),
-                child: Column(
-                  children: [
-                    TPropertyShowcase(),
-                  ],
-                ),
-                )
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
               ]
           ),
         ),
@@ -104,7 +98,7 @@ class ExploreScreen extends StatelessWidget {
 class TPropertyShowcase extends StatelessWidget {
   const TPropertyShowcase({
     super.key,
-    required this.images;
+    required this.images,
   });
   final List<String> images;
 
