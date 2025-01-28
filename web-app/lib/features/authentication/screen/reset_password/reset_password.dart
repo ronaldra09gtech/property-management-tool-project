@@ -6,6 +6,7 @@ import 'package:tranquilestate_admin_panel/features/authentication/screen/reset_
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
 
+  // ignore: annotate_overrides
   Widget build(BuildContext context) {
     return const TSiteTemplate(
       useLayout: false,
