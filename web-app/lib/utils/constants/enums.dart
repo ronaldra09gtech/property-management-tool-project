@@ -4,20 +4,20 @@
 -- */
 
 /// Switch of Custom Brand-Text-Size Widget
-enum AppRole { admin, user }
+enum AppRole { admin, client, user }
 
-enum TransactionType { buy, sell }
+enum TransactionType { rent, sell }
 
-enum ProductType { single, variable }
+enum PropertyType { rental, sell }
 
-enum ProductVisibility { published, hidden }
+enum PropertyVisibility { published, hidden }
 
 enum TextSizes { small, medium, large }
 
 enum ImageType { asset, network, memory, file }
 
-enum MediaCategory { folders, banners, brands, categories, products, users }
+enum MediaCategory { folders, banners, realty, categories, property, users }
 
-enum OrderStatus { pending, processing, shipped, delivered, cancelled }
+enum TransactionStatus { pending, processing, submissionRequirements, missingRequriments, releasing, cancelled }
 
 enum PaymentMethods { paypal, googlePay, applePay, visa, masterCard, creditCard, paystack, razorPay, paytm }
