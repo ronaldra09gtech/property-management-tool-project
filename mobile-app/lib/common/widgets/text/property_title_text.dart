@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/constants/enums.dart';
-
 class TPropertyTitleText extends StatelessWidget {
   const TPropertyTitleText(
       {super.key,

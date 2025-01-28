@@ -5,5 +5,6 @@ class TRoutes {
   static const dashboard = '/dashboard';
 
   static List sidebarMenuItems = [
+    dashboard
   ];
 }

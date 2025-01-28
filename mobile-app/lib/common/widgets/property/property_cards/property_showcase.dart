@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/proeperty_card.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/rounded_container.dart';
