@@ -1,12 +1,14 @@
 // ignore_for_file: deprecated_member_use, unnecessary_string_escapes
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tranquilestate/common/styles/shadows.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tranquilestate/common/widgets/icons/t_circular_icon.dart';
 import 'package:tranquilestate/common/widgets/images/t_rounded_image.dart';
 import 'package:tranquilestate/common/widgets/text/property_title_text.dart';
+import 'package:tranquilestate/feature/showroom/screens/home/property_details/property_details.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
@@ -18,9 +20,8 @@ class TPropertyCardVartical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-
     return GestureDetector(
-      onTap: (){},
+      onTap: () => Get.to(() => const PropertyDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

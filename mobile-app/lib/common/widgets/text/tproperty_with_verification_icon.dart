@@ -31,10 +31,9 @@ class TPropertyWithVerificationIcon extends StatelessWidget {
         Flexible(
             child: TPropertyTitleText(
               title: title,
-              color: textColor,
               maxLines: maxLines,
               textAlign: textAlign,
-              brandTextSize: brandTextSize,
+
             ),
         ),
         SizedBox(width: TSizes.xs,),
