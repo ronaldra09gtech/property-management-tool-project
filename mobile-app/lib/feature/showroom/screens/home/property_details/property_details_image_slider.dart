@@ -27,7 +27,7 @@ class TPropertySlider extends StatelessWidget {
               height: 400,
               child: Padding(
                 padding: EdgeInsets.all(TSizes.productImageRadius * 2),
-                child: Image(image: AssetImage(TImages.productImage1)
+                child: Image(image: AssetImage(TImages.interior1)
                 ),
               ),
             ),
@@ -47,7 +47,7 @@ class TPropertySlider extends StatelessWidget {
                         backgroundColor: dark ? TColors.dark : TColors.white,
                         border: Border.all(color: TColors.primary),
                         padding: const EdgeInsets.all(TSizes.sm),
-                        imageUrl: TImages.productImage1
+                        imageUrl: TImages.interior4
                     )
                 ),
               ),

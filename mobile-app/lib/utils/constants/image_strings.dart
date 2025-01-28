@@ -122,6 +122,12 @@ class TImages {
   static const String productImage75 = "assets/images/products/slipper-product-2.png";
   static const String productImage76 = "assets/images/products/slipper-product-3.png";
   static const String productImage77= "assets/images/products/slipper-product.png";
+  static const String interior1 = "assets/images/house_interior/interior1.jpeg";
+  static const String interior2 = "assets/images/house_interior/interior2.jpeg";
+  static const String interior3 = "assets/images/house_interior/interior3.jpeg";
+  static const String interior4 = "assets/images/house_interior/interior4.jpeg";
+  static const String interior5 = "assets/images/house_interior/interior5.jpeg";
+  static const String interior6 = "assets/images/house_interior/interior6.jpeg";
 
 
 
