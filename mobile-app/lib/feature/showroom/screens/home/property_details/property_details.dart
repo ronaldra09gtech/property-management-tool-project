@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tranquilestate/feature/showroom/screens/home/property_details/property_attributes.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/property_details/property_details_image_slider.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/property_details/property_meta_data.dart';
 import 'package:tranquilestate/feature/showroom/screens/home/property_details/rating_and_share.dart';
@@ -23,6 +24,8 @@ class PropertyDetails extends StatelessWidget {
                 children: [
                   TRatingAndShare(),
                   TPropertyMetaData(),
+                  SizedBox(height: TSizes.spaceBtwItems),
+                  TPropertyAttributes(),
                 ],
               ),
             )

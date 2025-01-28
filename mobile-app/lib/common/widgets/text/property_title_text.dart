@@ -7,7 +7,7 @@ class TPropertyTitleText extends StatelessWidget {
       {super.key,
       required this.title,
       this.smallSize = false,
-      this.maxLines = 2,
+      this.maxLines = 10,
       this.textAlign = TextAlign.left});
 
 

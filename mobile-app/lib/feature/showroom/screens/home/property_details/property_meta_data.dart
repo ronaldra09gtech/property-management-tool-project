@@ -38,7 +38,7 @@ class TPropertyMetaData extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwItems / 1.5,),
         const TPropertyTitleText(title: 'Pent House'),
         const SizedBox(height: TSizes.spaceBtwItems / 1.5,),
-
+        const TPropertyWithVerificationIcon(title: 'Robinson Land Corp.'),
         Row(
           children: [
             const TPropertyTitleText(title: 'Status'),
@@ -46,7 +46,7 @@ class TPropertyMetaData extends StatelessWidget {
             Text('Available', style: Theme.of(context).textTheme.titleSmall,)
           ],
         ),
-        const TPropertyWithVerificationIcon(title: 'Robinson Land Corp.')
+
 
       ],
     );
