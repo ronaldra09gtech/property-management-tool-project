@@ -12,7 +12,28 @@
           "package_name": "com.tranquilestate.andorid"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "279996938146-8cbq3ripeid0bbbit32cp7ih9383agpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranquilestate.andorid",
+            "certificate_hash": "2bdb9723043dd1928fa14bc19ff34a82e855e7e2"
+          }
+        },
+        {
+          "client_id": "279996938146-ea568gefkbq11g0g2sv028pia0d8c4ed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranquilestate.andorid",
+            "certificate_hash": "239242a7888672fad24e47e2c930d5e9ea3d650e"
+          }
+        },
+        {
+          "client_id": "279996938146-1c52ad3up1h4rhbo31bth13gjsbtvvbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBHmLsPsox2Ql4fMhX1lgfhmDdxd61g3Og"
@@ -20,7 +41,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279996938146-1c52ad3up1h4rhbo31bth13gjsbtvvbf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "279996938146-qtepmehk7qk2lg9m2vvg61fuhhakdvd3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tranquilestate.ios"
+              }
+            }
+          ]
         }
       }
     }
