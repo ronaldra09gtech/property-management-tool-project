@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tranquilestate_admin_panel/routes/routes.dart';
 
 class RouteObserver extends GetObserver {
 
