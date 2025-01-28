@@ -19,6 +19,7 @@ class TPropertyShowcase extends StatelessWidget {
     return TRoundedContainer(
       showBorder: true,
       borderColor: TColors.darkGrey,
+      padding: const EdgeInsets.all(TSizes.md),
       backgroundColor: Colors.transparent,
       margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Column(
@@ -37,8 +38,7 @@ class TPropertyShowcase extends StatelessWidget {
         height: 100,
         backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkGrey : TColors.light,
         margin: const EdgeInsets.only(right: TSizes.sm),
-        padding: const EdgeInsets.all(TSizes.md),
-        child: const Image(fit: BoxFit.contain, image: AssetImage(TImages.productImage2),),
+        child: const Image(fit: BoxFit.contain, image: AssetImage(TImages.interior6),),
       ),
     );
   }
