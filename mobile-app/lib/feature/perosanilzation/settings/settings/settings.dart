@@ -5,6 +5,7 @@ import 'package:tranquilestate/common/widgets/appbar/appbar.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tranquilestate/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
+import 'package:tranquilestate/feature/authentication/screens/login/login.dart';
 import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile.dart';
 import 'package:tranquilestate/feature/perosanilzation/settings/profile/user_profile.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
@@ -46,7 +47,7 @@ class SettingScreen extends StatelessWidget {
                   TUserListTile(icon: Iconsax.call, title: 'Contact Support', subTitle: 'Helps you with any abnormalities in the app ', onTap: (){}),
                   SizedBox(height: TSizes.spaceBtwSections),
                   SizedBox(width: double.infinity,
-                  child: OutlinedButton(onPressed: (){}, child: const Text('Logout')),
+                  child: OutlinedButton(onPressed: () => Get.to(() =>  const LoginScreen()), child: const Text('Logout')),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5)
                 ],

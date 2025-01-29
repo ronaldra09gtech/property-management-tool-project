@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -9,6 +7,7 @@ import 'package:tranquilestate/feature/showroom/screens/home/home.dart';
 import 'package:tranquilestate/feature/showroom/screens/wishlist/wish_list.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
+
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});

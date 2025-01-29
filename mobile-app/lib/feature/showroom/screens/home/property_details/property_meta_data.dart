@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, unnecessary_string_escapes
+
 import 'package:flutter/material.dart';
 import 'package:tranquilestate/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tranquilestate/common/widgets/text/property_title_text.dart';
@@ -12,7 +14,7 @@ class TPropertyMetaData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final darkMode = THelperFunctions.isDarkMode(context);
+    THelperFunctions.isDarkMode(context);
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
