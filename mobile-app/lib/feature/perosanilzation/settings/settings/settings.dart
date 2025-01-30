@@ -18,36 +18,71 @@ class SettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child:
-        Column(
+        child: Column(
           children: [
             TPrimaryHeaderContainer(
-                child: Column(
-                  children: [
-                   TAppBar(title: Text('Account',
-                    style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white))),
-                    TUserProfile(onPressed: () => Get.to(() => const ProfileScreen())),
-                    const SizedBox(height: TSizes.spaceBtwSections,)
-                  ],
-                ),
-            ),
-              Padding(
-                padding: EdgeInsets.all(TSizes.defaultSpace),
-                child: Column(
+              child: Column(
                 children: [
-                  TSectionHeading(title: 'Account Settings' ,showActionButton: false),
+                  TAppBar(
+                      title: Text('Account',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .apply(color: TColors.white))),
+                  TUserProfile(
+                      onPressed: () => Get.to(() => const ProfileScreen())),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  TSectionHeading(
+                      title: 'Account Settings', showActionButton: false),
                   SizedBox(height: TSizes.spaceBtwSections),
-                  TUserListTile(icon: Iconsax.safe_home, title: 'My Address', subTitle: '', onTap: (){}),
-                  TUserListTile(icon: Iconsax.bill, title: 'Bills', subTitle: 'Check for Bills ', onTap: (){}),
-                  TUserListTile(icon: Iconsax.bank, title: 'Bank Aaccount', subTitle: 'Withdraw balance to register bank account', onTap: (){}),
-                  TUserListTile(icon: Iconsax.notification, title: 'Notification', subTitle: 'Set any kind of notification messages', onTap: (){}),
-                  TUserListTile(icon: Iconsax.security_card, title: 'Account Privacy', subTitle: '', onTap: (){}),
+                  TUserListTile(
+                      icon: Iconsax.safe_home,
+                      title: 'My Address',
+                      subTitle: '',
+                      onTap: () {}),
+                  TUserListTile(
+                      icon: Iconsax.bill,
+                      title: 'Bills',
+                      subTitle: 'Check for Bills ',
+                      onTap: () {}),
+                  TUserListTile(
+                      icon: Iconsax.bank,
+                      title: 'Bank Aaccount',
+                      subTitle: 'Withdraw balance to register bank account',
+                      onTap: () {}),
+                  TUserListTile(
+                      icon: Iconsax.notification,
+                      title: 'Notification',
+                      subTitle: 'Set any kind of notification messages',
+                      onTap: () {}),
+                  TUserListTile(
+                      icon: Iconsax.security_card,
+                      title: 'Account Privacy',
+                      subTitle: '',
+                      onTap: () {}),
                   SizedBox(height: TSizes.spaceBtwSections),
-                  TSectionHeading(title: 'App Settings' ,showActionButton: false),
-                  TUserListTile(icon: Iconsax.call, title: 'Contact Support', subTitle: 'Helps you with any abnormalities in the app ', onTap: (){}),
+                  TSectionHeading(
+                      title: 'App Settings', showActionButton: false),
+                  TUserListTile(
+                      icon: Iconsax.call,
+                      title: 'Contact Support',
+                      subTitle: 'Helps you with any abnormalities in the app ',
+                      onTap: () {}),
                   SizedBox(height: TSizes.spaceBtwSections),
-                  SizedBox(width: double.infinity,
-                  child: OutlinedButton(onPressed: () => Get.to(() =>  const LoginScreen()), child: const Text('Logout')),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                        onPressed: () => Get.to(() => const LoginScreen()),
+                        child: const Text('Logout')),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5)
                 ],

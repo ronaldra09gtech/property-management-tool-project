@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tranquilestate/feature/authentication/controllers/signup/sign_up_controller.dart';
 import 'package:tranquilestate/feature/authentication/screens/signup/widgets/terms_condition_checkbox.dart';
-import 'package:tranquilestate/feature/authentication/signup_controller/sign_up_controller.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/constants/text_strings.dart';
 import 'package:tranquilestate/utils/validators/validation.dart';

@@ -63,9 +63,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '279996938146',
     projectId: 'tranquilestate-147f6',
     storageBucket: 'tranquilestate-147f6.firebasestorage.app',
-    androidClientId: '279996938146-8cbq3ripeid0bbbit32cp7ih9383agpg.apps.googleusercontent.com',
-    iosClientId: '279996938146-qtepmehk7qk2lg9m2vvg61fuhhakdvd3.apps.googleusercontent.com',
+    androidClientId:
+        '279996938146-8cbq3ripeid0bbbit32cp7ih9383agpg.apps.googleusercontent.com',
+    iosClientId:
+        '279996938146-qtepmehk7qk2lg9m2vvg61fuhhakdvd3.apps.googleusercontent.com',
     iosBundleId: 'com.tranquilestate.ios',
   );
-
 }

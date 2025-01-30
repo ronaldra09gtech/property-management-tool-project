@@ -6,7 +6,6 @@ import 'package:tranquilestate/common/widgets/text/section_heading.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
-
 class TCategoryTab extends StatelessWidget {
   const TCategoryTab({super.key});
 
@@ -21,15 +20,26 @@ class TCategoryTab extends StatelessWidget {
           child: Column(
             children: [
               TPropertyShowcase(
-                images: [TImages.productImage2, TImages.productImage1, TImages.productImage3],
+                images: [
+                  TImages.productImage2,
+                  TImages.productImage1,
+                  TImages.productImage3
+                ],
               ),
-              TSectionHeading(title: 'You might like', onPressed: (){},),
-              const SizedBox(height: TSizes.spaceBtwItems,),
-              TGridLayout(itemCount: 4, itemBuilder: (_, index ) => TPropertyCardVartical())
+              TSectionHeading(
+                title: 'You might like',
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
+              TGridLayout(
+                  itemCount: 4,
+                  itemBuilder: (_, index) => TPropertyCardVartical())
             ],
           ),
-      ),
-    ],
+        ),
+      ],
     );
   }
 }

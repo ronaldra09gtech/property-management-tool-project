@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
-
 class ProfileMenu extends StatelessWidget {
   const ProfileMenu({
     super.key,
@@ -21,12 +20,25 @@ class ProfileMenu extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwItems / 1.5),
+        padding:
+            const EdgeInsets.symmetric(vertical: TSizes.spaceBtwItems / 1.5),
         child: Row(
           children: [
-            Expanded(flex: 3, child: Text(title, style: Theme.of(context).textTheme.bodySmall, overflow: TextOverflow.ellipsis)),
-            Expanded(flex: 5, child: Text(value, style: Theme.of(context).textTheme.bodySmall, overflow: TextOverflow.ellipsis)),
-            Expanded(child: Icon(icon, size: 18,))
+            Expanded(
+                flex: 3,
+                child: Text(title,
+                    style: Theme.of(context).textTheme.bodySmall,
+                    overflow: TextOverflow.ellipsis)),
+            Expanded(
+                flex: 5,
+                child: Text(value,
+                    style: Theme.of(context).textTheme.bodySmall,
+                    overflow: TextOverflow.ellipsis)),
+            Expanded(
+                child: Icon(
+              icon,
+              size: 18,
+            ))
           ],
         ),
       ),

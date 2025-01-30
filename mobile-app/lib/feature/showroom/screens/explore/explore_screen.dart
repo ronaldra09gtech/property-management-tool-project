@@ -68,27 +68,23 @@ class ExploreScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                bottom: const TTabBar(
-                    tabs: [
-                      Tab(child: Text('Residential')),
-                      Tab(child: Text('Commercial')),
-                      Tab(child: Text('Industrial')),
-                      Tab(child: Text('Land')),
-                      Tab(child: Text('Special Purpose'))
-                    ]
-                ),
+                bottom: const TTabBar(tabs: [
+                  Tab(child: Text('Residential')),
+                  Tab(child: Text('Commercial')),
+                  Tab(child: Text('Industrial')),
+                  Tab(child: Text('Land')),
+                  Tab(child: Text('Special Purpose'))
+                ]),
               )
             ];
           },
-          body: TabBarView(
-              children: [
-                TCategoryTab(),
-                TCategoryTab(),
-                TCategoryTab(),
-                TCategoryTab(),
-                TCategoryTab(),
-              ]
-          ),
+          body: TabBarView(children: [
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+          ]),
         ),
       ),
     );

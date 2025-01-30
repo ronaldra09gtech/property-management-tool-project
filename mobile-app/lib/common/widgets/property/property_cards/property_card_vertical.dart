@@ -59,8 +59,8 @@ class TPropertyCardVartical extends StatelessWidget {
                   const Positioned(
                       top: 0,
                       right: 0,
-                      child:
-                          TCircularIcon(icon: Iconsax.heart5, color: Colors.red)),
+                      child: TCircularIcon(
+                          icon: Iconsax.heart5, color: Colors.red)),
                 ],
               ),
             ),
@@ -70,7 +70,8 @@ class TPropertyCardVartical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TPropertyTitleText(title: 'Town House', smallSize: true),
+                  const TPropertyTitleText(
+                      title: 'Town House', smallSize: true),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
                   Row(
                     children: [
@@ -105,8 +106,9 @@ class TPropertyCardVartical extends StatelessWidget {
                           width: TSizes.iconLg * 1.2,
                           height: TSizes.iconLg * 1.2,
                           child: Center(
-                            child: Icon(Icons.add,
-                            color: TColors.white,
+                            child: Icon(
+                              Icons.add,
+                              color: TColors.white,
                             ),
                           ),
                         ),

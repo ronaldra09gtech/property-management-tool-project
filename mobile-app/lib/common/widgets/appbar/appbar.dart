@@ -6,7 +6,6 @@ import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/device/device_utility.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
-
 class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TAppBar(
       {super.key,
@@ -32,7 +31,8 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(),
-                icon: const Icon(Iconsax.arrow_left), color: dark ? TColors.white : TColors.dark)
+                icon: const Icon(Iconsax.arrow_left),
+                color: dark ? TColors.white : TColors.dark)
             : leadingIcon != null
                 ? IconButton(
                     onPressed: leadingOnPressed, icon: Icon(leadingIcon))

@@ -6,15 +6,15 @@ import 'package:tranquilestate/utils/device/device_utility.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
 class TSearchContainer extends StatelessWidget {
-  const TSearchContainer({
-    super.key,
-    required this.text,
-    this.icon = Iconsax.search_normal,
-    this.showBackground = true,
-    this.showborder = true,
-    this.onTap,
-    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace)
-  });
+  const TSearchContainer(
+      {super.key,
+      required this.text,
+      this.icon = Iconsax.search_normal,
+      this.showBackground = true,
+      this.showborder = true,
+      this.onTap,
+      this.padding =
+          const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace)});
 
   final String text;
   final IconData? icon;
@@ -35,8 +35,8 @@ class TSearchContainer extends StatelessWidget {
           decoration: BoxDecoration(
               color: showBackground
                   ? dark
-                  ? TColors.dark
-                  : TColors.light
+                      ? TColors.dark
+                      : TColors.light
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
               border: showborder ? Border.all(color: TColors.grey) : null),

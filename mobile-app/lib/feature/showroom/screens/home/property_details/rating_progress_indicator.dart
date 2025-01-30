@@ -4,7 +4,9 @@ import 'package:tranquilestate/utils/device/device_utility.dart';
 
 class TRatingProgressIndicator extends StatelessWidget {
   const TRatingProgressIndicator({
-    super.key, required this.text, required this.value,
+    super.key,
+    required this.text,
+    required this.value,
   });
 
   final String text;
@@ -14,7 +16,12 @@ class TRatingProgressIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded( flex: 1, child: Text(text, style: Theme.of(context).textTheme.bodyMedium,)),
+        Expanded(
+            flex: 1,
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.bodyMedium,
+            )),
         Expanded(
             flex: 11,
             child: SizedBox(
@@ -26,8 +33,7 @@ class TRatingProgressIndicator extends StatelessWidget {
                 borderRadius: BorderRadius.circular(7),
                 valueColor: const AlwaysStoppedAnimation(TColors.primary),
               ),
-            )
-        )
+            ))
       ],
     );
   }

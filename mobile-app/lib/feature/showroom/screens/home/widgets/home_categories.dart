@@ -23,7 +23,6 @@ class THomeCategories extends StatelessWidget {
           );
         },
       ),
-
     );
   }
 }

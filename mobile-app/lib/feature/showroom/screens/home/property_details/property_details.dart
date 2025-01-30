@@ -6,7 +6,6 @@ import 'package:tranquilestate/feature/showroom/screens/home/property_details/ra
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
-
 class PropertyDetails extends StatelessWidget {
   const PropertyDetails({super.key});
 
@@ -19,7 +18,10 @@ class PropertyDetails extends StatelessWidget {
           children: [
             TPropertySlider(),
             Padding(
-                padding: EdgeInsets.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace, bottom: TSizes.defaultSpace),
+              padding: EdgeInsets.only(
+                  right: TSizes.defaultSpace,
+                  left: TSizes.defaultSpace,
+                  bottom: TSizes.defaultSpace),
               child: Column(
                 children: [
                   TRatingAndShare(),
@@ -35,5 +37,3 @@ class PropertyDetails extends StatelessWidget {
     );
   }
 }
-
-

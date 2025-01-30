@@ -5,17 +5,18 @@ import 'package:tranquilestate/utils/constants/colors.dart';
 
 class TRatingIndicator extends StatelessWidget {
   const TRatingIndicator({
-    super.key, required this.rating,
+    super.key,
+    required this.rating,
   });
 
   final double rating;
+
   @override
   Widget build(BuildContext context) {
     return RatingBarIndicator(
       rating: rating,
       itemSize: 20,
-      itemBuilder: (_,__) =>  Icon(Iconsax.star1, color: TColors.primary),
-
+      itemBuilder: (_, __) => Icon(Iconsax.star1, color: TColors.primary),
     );
   }
 }

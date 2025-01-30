@@ -1,6 +1,3 @@
-
-
-
 import 'package:get/get.dart';
 import 'package:tranquilestate/utils/helpers/network_manager.dart';
 

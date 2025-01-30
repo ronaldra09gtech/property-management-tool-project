@@ -21,11 +21,11 @@ class OnBoardingController extends GetxController {
 
   /// Update Current Index & Jump to Next Page
   void nextPage() {
-    if(currentPageIndex.value == 2){
+    if (currentPageIndex.value == 2) {
       final storage = GetStorage();
       storage.write('IsFirstTime', false);
       Get.offAll(LoginScreen());
-    } else{
+    } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
     }

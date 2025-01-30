@@ -3,13 +3,8 @@ import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/device/device_utility.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
-
-
-class TTabBar extends StatelessWidget implements PreferredSizeWidget{
-  const TTabBar({
-    super.key,
-    required this.tabs
-  });
+class TTabBar extends StatelessWidget implements PreferredSizeWidget {
+  const TTabBar({super.key, required this.tabs});
 
   final List<Widget> tabs;
 
@@ -19,10 +14,10 @@ class TTabBar extends StatelessWidget implements PreferredSizeWidget{
     return Material(
       color: dark ? TColors.black : TColors.white,
       child: TabBar(
-          tabs: tabs,
-          isScrollable: true,
-          indicatorColor: TColors.primary,
-          labelColor: dark ? TColors.white : TColors.primary,
+        tabs: tabs,
+        isScrollable: true,
+        indicatorColor: TColors.primary,
+        labelColor: dark ? TColors.white : TColors.primary,
         unselectedLabelColor: TColors.darkGrey,
       ),
     );

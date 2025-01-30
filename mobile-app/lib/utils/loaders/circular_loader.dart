@@ -23,9 +23,12 @@ class TCircularLoader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(TSizes.lg),
-      decoration: BoxDecoration(color: backgroundColor, shape: BoxShape.circle), // Circular background
+      decoration: BoxDecoration(color: backgroundColor, shape: BoxShape.circle),
+      // Circular background
       child: Center(
-        child: CircularProgressIndicator(color: foregroundColor, backgroundColor: Colors.transparent), // Circular loader
+        child: CircularProgressIndicator(
+            color: foregroundColor,
+            backgroundColor: Colors.transparent), // Circular loader
       ),
     );
   }

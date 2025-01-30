@@ -32,7 +32,8 @@ class ForgetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () => Get.to(() => const ResetPassword()), child: const Text(TTexts.submit)),
+                  onPressed: () => Get.to(() => const ResetPassword()),
+                  child: const Text(TTexts.submit)),
             ),
           ],
         ),

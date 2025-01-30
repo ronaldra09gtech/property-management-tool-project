@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 
-
 class TUserListTile extends StatelessWidget {
-  const TUserListTile({
-    super.key,
-    required this.icon,
-    required this.title,
-    required this.subTitle,
-    this.trailing,
-    this.onTap
-  });
+  const TUserListTile(
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.subTitle,
+      this.trailing,
+      this.onTap});
 
   final IconData icon;
   final String title, subTitle;
@@ -20,7 +18,11 @@ class TUserListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, size: 28, color: TColors.primary,),
+      leading: Icon(
+        icon,
+        size: 28,
+        color: TColors.primary,
+      ),
       title: Text(title, style: Theme.of(context).textTheme.labelMedium),
       subtitle: Text(subTitle, style: Theme.of(context).textTheme.labelMedium),
       trailing: trailing,

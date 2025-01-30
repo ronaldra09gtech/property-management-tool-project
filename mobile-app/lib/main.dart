@@ -9,7 +9,8 @@ import 'package:tranquilestate/firebase_options.dart';
 
 Future<void> main() async {
   ///Widgets Bidning
-  final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  final WidgetsBinding widgetsBinding =
+      WidgetsFlutterBinding.ensureInitialized();
 
   ///GetX Local Storage
   await GetStorage.init();
@@ -18,9 +19,8 @@ Future<void> main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   /// Initialize Firebase
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
-      (FirebaseApp value) => Get.put(AuthenticationRepository())
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then((FirebaseApp value) => Get.put(AuthenticationRepository()));
 
   /// Load all the Material Design / Themes / Localizations / Bindings
   runApp(const App());

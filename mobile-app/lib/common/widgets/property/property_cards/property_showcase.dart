@@ -8,12 +8,12 @@ import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
-
 class TPropertyShowcase extends StatelessWidget {
   const TPropertyShowcase({
     super.key,
     required this.images,
   });
+
   final List<String> images;
 
   @override
@@ -29,18 +29,27 @@ class TPropertyShowcase extends StatelessWidget {
           const TPropertyCard(
             showBorder: false,
           ),
-          Row(children: images.map((image)=> PropertyTopProductImageWidget(image, context)).toList()),
+          Row(
+              children: images
+                  .map((image) => PropertyTopProductImageWidget(image, context))
+                  .toList()),
         ],
       ),
     );
   }
-  Widget PropertyTopProductImageWidget(String images, context){
+
+  Widget PropertyTopProductImageWidget(String images, context) {
     return Expanded(
       child: TRoundedContainer(
         height: 100,
-        backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkGrey : TColors.light,
+        backgroundColor: THelperFunctions.isDarkMode(context)
+            ? TColors.darkGrey
+            : TColors.light,
         margin: const EdgeInsets.only(right: TSizes.sm),
-        child: const Image(fit: BoxFit.contain, image: AssetImage(TImages.interior6),),
+        child: const Image(
+          fit: BoxFit.contain,
+          image: AssetImage(TImages.interior6),
+        ),
       ),
     );
   }

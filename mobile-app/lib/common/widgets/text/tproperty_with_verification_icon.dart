@@ -5,7 +5,6 @@ import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/enums.dart';
 import '../../../utils/constants/sizes.dart';
 
-
 class TPropertyWithVerificationIcon extends StatelessWidget {
   const TPropertyWithVerificationIcon({
     super.key,
@@ -29,16 +28,20 @@ class TPropertyWithVerificationIcon extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Flexible(
-            child: TPropertyTitleText(
-              title: title,
-              maxLines: maxLines,
-              textAlign: textAlign,
-
-            ),
+          child: TPropertyTitleText(
+            title: title,
+            maxLines: maxLines,
+            textAlign: textAlign,
+          ),
         ),
-        SizedBox(width: TSizes.xs,),
-        Icon(Iconsax.verify5, color: iconColor, size: TSizes.iconXs,)
-        
+        SizedBox(
+          width: TSizes.xs,
+        ),
+        Icon(
+          Iconsax.verify5,
+          color: iconColor,
+          size: TSizes.iconXs,
+        )
       ],
     );
   }

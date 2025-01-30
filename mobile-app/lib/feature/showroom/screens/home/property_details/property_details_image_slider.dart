@@ -9,17 +9,16 @@ import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
-
 class TPropertySlider extends StatelessWidget {
-  const TPropertySlider({super.key,});
-
+  const TPropertySlider({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return TCurvedEdgeWidget(
-      child:
-      Container(
+      child: Container(
         color: dark ? TColors.darkGrey : TColors.light,
         child: Stack(
           children: [
@@ -27,8 +26,7 @@ class TPropertySlider extends StatelessWidget {
               height: 400,
               child: Padding(
                 padding: EdgeInsets.all(TSizes.productImageRadius * 2),
-                child: Image(image: AssetImage(TImages.interior1)
-                ),
+                child: Image(image: AssetImage(TImages.interior1)),
               ),
             ),
             Positioned(
@@ -41,21 +39,24 @@ class TPropertySlider extends StatelessWidget {
                     itemCount: 6,
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
-                    separatorBuilder: (_, __) => const SizedBox(width: TSizes.spaceBtwItems),
+                    separatorBuilder: (_, __) =>
+                        const SizedBox(width: TSizes.spaceBtwItems),
                     itemBuilder: (_, index) => TRoundedImage(
                         width: 80,
                         backgroundColor: dark ? TColors.dark : TColors.white,
                         border: Border.all(color: TColors.primary),
                         padding: const EdgeInsets.all(TSizes.sm),
-                        imageUrl: TImages.interior4
-                    )
-                ),
+                        imageUrl: TImages.interior4)),
               ),
             ),
             const TAppBar(
               showBackArrow: true,
-              actions: [TCircularIcon(icon: Iconsax.heart5, color: Colors.red,)],
-
+              actions: [
+                TCircularIcon(
+                  icon: Iconsax.heart5,
+                  color: Colors.red,
+                )
+              ],
             )
           ],
         ),

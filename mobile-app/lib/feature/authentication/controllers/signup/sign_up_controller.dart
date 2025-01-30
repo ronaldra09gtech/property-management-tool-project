@@ -29,16 +29,22 @@ class SignUpController extends GetxController {
 
       ///START LOADING
       TFullScreenLoader.openLoadingDialog(
-          'We are processing your information...', TImages.productImage1);
+          'We are processing your information...', TImages.docerAnimation);
 
 
       ///CHECK INTERNET CONNECTIVITY
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) return;
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
 
 
       ///FROM VALIDATION
-      if (!signupFormKey.currentState!.validate()) return;
+      if (!signupFormKey.currentState!.validate()){
+        TFullScreenLoader.stopLoading();
+        return;
+      }
 
       //PRIVACY POLICY CHECK
       if (!privacyPolicy.value) {
@@ -65,10 +71,13 @@ class SignUpController extends GetxController {
       final userRepository  = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
 
+      //Stop Loading
+      TFullScreenLoader.stopLoading();
+
       //show success messages
       TLoaders.successSnackBar(title: 'Congratulations', message: 'Your Account has been created! verify email to continue.');
       //move to verify email screen
-      Get.to(() => VerifyEmailScreen(email: email.text.trim(),));
+      Get.to(() => const VerifyEmailScreen());
     } catch (e) {
       TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     } finally {

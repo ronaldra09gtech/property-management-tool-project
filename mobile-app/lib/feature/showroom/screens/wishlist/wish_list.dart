@@ -8,8 +8,6 @@ import 'package:tranquilestate/common/widgets/property/property_cards/property_c
 import 'package:tranquilestate/feature/showroom/screens/home/home.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
-
-
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
 
@@ -22,14 +20,18 @@ class FavouriteScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         actions: [
-          TCircularIcon(icon: Iconsax.add, onPressed: () => Get.to(const HomeScreen())),
+          TCircularIcon(
+              icon: Iconsax.add, onPressed: () => Get.to(const HomeScreen())),
         ],
       ),
       body: SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: Padding(
+          padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              TGridLayout(itemCount: 6, itemBuilder: (_, index) => TPropertyCardVartical())
+              TGridLayout(
+                  itemCount: 6,
+                  itemBuilder: (_, index) => TPropertyCardVartical())
             ],
           ),
         ),
@@ -37,6 +39,3 @@ class FavouriteScreen extends StatelessWidget {
     );
   }
 }
-
-
-

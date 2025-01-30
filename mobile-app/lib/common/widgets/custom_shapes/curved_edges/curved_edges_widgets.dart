@@ -3,7 +3,8 @@ import 'package:tranquilestate/common/widgets/custom_shapes/curved_edges/curved_
 
 class TCurvedEdgeWidget extends StatelessWidget {
   const TCurvedEdgeWidget({
-    super.key, this.child,
+    super.key,
+    this.child,
   });
 
   final Widget? child;

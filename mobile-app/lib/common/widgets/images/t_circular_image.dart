@@ -4,7 +4,6 @@ import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_functions.dart';
 
-
 class TCircularImage extends StatelessWidget {
   const TCircularImage({
     super.key,
@@ -32,13 +31,17 @@ class TCircularImage extends StatelessWidget {
       height: 56,
       padding: const EdgeInsets.all(TSizes.sm),
       decoration: BoxDecoration(
-        color: THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white,
+        color: THelperFunctions.isDarkMode(context)
+            ? TColors.black
+            : TColors.white,
         borderRadius: BorderRadius.circular(100),
       ),
       child: Center(
         child: Image(
           fit: fit,
-          image: isNetworkImage ? NetworkImage(image) : AssetImage(image) as ImageProvider,
+          image: isNetworkImage
+              ? NetworkImage(image)
+              : AssetImage(image) as ImageProvider,
           color: overlayColor,
         ),
       ),

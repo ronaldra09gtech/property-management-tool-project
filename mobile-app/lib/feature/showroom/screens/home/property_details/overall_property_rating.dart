@@ -10,7 +10,10 @@ class TOverAllPropertyRating extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 3, child: Text('4.9', style: Theme.of(context).textTheme.displayLarge)),
+        Expanded(
+            flex: 3,
+            child:
+                Text('4.9', style: Theme.of(context).textTheme.displayLarge)),
         Expanded(
           flex: 7,
           child: Column(

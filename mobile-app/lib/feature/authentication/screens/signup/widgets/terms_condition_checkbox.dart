@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tranquilestate/feature/authentication/signup_controller/sign_up_controller.dart';
+import 'package:tranquilestate/feature/authentication/controllers/signup/sign_up_controller.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/constants/text_strings.dart';

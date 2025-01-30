@@ -4,7 +4,10 @@ import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({
-    super.key, required this.image, required this.title, required this.subTitle,
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
   });
 
   final String image, title, subTitle;
@@ -24,19 +27,15 @@ class OnBoardingPage extends StatelessWidget {
               ),
               Text(
                 title,
-                style: Theme
-                    .of(context)
-                    .textTheme
-                    .headlineMedium,
+                style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: TSizes.spaceBtwItems,),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
               Text(
                 subTitle,
-                style: Theme
-                    .of(context)
-                    .textTheme
-                    .bodyMedium,
+                style: Theme.of(context).textTheme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
             ],

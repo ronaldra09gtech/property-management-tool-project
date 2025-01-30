@@ -15,7 +15,7 @@ class TPropertyMetaData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     THelperFunctions.isDarkMode(context);
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
@@ -32,24 +32,39 @@ class TPropertyMetaData extends StatelessWidget {
                       .apply(color: TColors.black)),
             ),
             const SizedBox(width: TSizes.spaceBtwItems),
-            Text('\¥10,000,000', style: Theme.of(context).textTheme.titleSmall!.apply(decoration: TextDecoration.lineThrough),),
-            const SizedBox(width: TSizes.spaceBtwItems,),
+            Text(
+              '\¥10,000,000',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleSmall!
+                  .apply(decoration: TextDecoration.lineThrough),
+            ),
+            const SizedBox(
+              width: TSizes.spaceBtwItems,
+            ),
             const TPropertyPriceText(price: '9,000,000', isLarge: true)
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems / 1.5,),
+        const SizedBox(
+          height: TSizes.spaceBtwItems / 1.5,
+        ),
         const TPropertyTitleText(title: 'Pent House'),
-        const SizedBox(height: TSizes.spaceBtwItems / 1.5,),
+        const SizedBox(
+          height: TSizes.spaceBtwItems / 1.5,
+        ),
         const TPropertyWithVerificationIcon(title: 'Robinson Land Corp.'),
         Row(
           children: [
             const TPropertyTitleText(title: 'Status'),
-            const SizedBox(width: TSizes.spaceBtwItems,),
-            Text('Available', style: Theme.of(context).textTheme.titleSmall,)
+            const SizedBox(
+              width: TSizes.spaceBtwItems,
+            ),
+            Text(
+              'Available',
+              style: Theme.of(context).textTheme.titleSmall,
+            )
           ],
         ),
-
-
       ],
     );
   }

@@ -5,7 +5,12 @@ import 'package:tranquilestate/utils/constants/text_strings.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
+  const SuccessScreen(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.subTitle,
+      required this.onPressed});
 
   final String image, title, subTitle;
   final VoidCallback onPressed;
@@ -34,8 +39,7 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: onPressed,
-                    child: const Text(TTexts.tContinue)),
+                    onPressed: onPressed, child: const Text(TTexts.tContinue)),
               ),
             ],
           ),

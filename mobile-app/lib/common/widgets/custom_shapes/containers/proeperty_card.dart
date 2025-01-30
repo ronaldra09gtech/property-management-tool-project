@@ -39,13 +39,14 @@ class TPropertyCard extends StatelessWidget {
               ),
             ),
             const SizedBox(width: TSizes.spaceBtwItems / 2),
-
             Expanded(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TPropertyWithVerificationIcon(title: 'Robinson Land Corp.', brandTextSize: TextSizes.large),
+                  TPropertyWithVerificationIcon(
+                      title: 'Robinson Land Corp.',
+                      brandTextSize: TextSizes.large),
                   Text(
                     '15 Properties',
                     overflow: TextOverflow.ellipsis,
