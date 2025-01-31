@@ -17,13 +17,15 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+
+          /// Horizontal Scrollable Pages
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardingPage(
                 image: TImages.onBoardingImage1,
-                title: TTexts.onBoardingSubTitle1,
+                title: TTexts.onBoardingTitle1,
                 subTitle: TTexts.onBoardingSubTitle1,
               ),
               OnBoardingPage(
@@ -38,8 +40,14 @@ class OnBoardingScreen extends StatelessWidget {
               ),
             ],
           ),
+
+          /// Skip Button
           const OnBoardingSkip(),
+
+          /// Navigation Dot
           const OnBoardingDotNavigation(),
+
+          /// Next Button
           const OnBoardingNextButton(),
         ],
       ),

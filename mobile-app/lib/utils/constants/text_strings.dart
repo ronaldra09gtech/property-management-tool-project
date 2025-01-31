@@ -9,16 +9,16 @@ class TTexts {
   static const String tContinue = "Continue";
 
   // -- OnBoarding Texts
-  static const String onBoardingTitle1 = "Choose your product";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your door step";
+  static const String onBoardingTitle1 = "Choose your Property";
+  static const String onBoardingTitle2 = "Your Ideal Property, Just a Step Away!";
+  static const String onBoardingTitle3 = "Unlock Your Dream Home – Where Comfort Meets Convenience!";
 
   static const String onBoardingSubTitle1 =
-      "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
+      "Discover Endless Possibilities in Real Estate – Find Your Dream Property Today!";
   static const String onBoardingSubTitle2 =
-      "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
+      "Find the Perfect Space to Call Home – Designed for You.";
   static const String onBoardingSubTitle3 =
-      "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+      "Explore a World of Premium Properties Tailored to Your Lifestyle.";
 
   // -- Authentication Forms
   static const String firstName = "First Name";
