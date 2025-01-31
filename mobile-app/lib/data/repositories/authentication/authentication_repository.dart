@@ -22,7 +22,11 @@ class AuthenticationRepository extends GetxController {
   /// Called from main.dart on app launch
   @override
   void onReady() {
+
+    /// Remove the native splash screen
     FlutterNativeSplash.remove();
+
+    /// Redirect to the appropriate screen
     screenRedirect();
   }
 

@@ -12,7 +12,7 @@ import 'package:tranquilestate/utils/popups/loaders.dart';
 class SignUpController extends GetxController {
   static SignUpController get instance => Get.find();
 
-  ///VARIABLES
+  /// Variables
   final hidePassword = true.obs;
   final privacyPolicy = true.obs;
   final email = TextEditingController();
@@ -23,30 +23,30 @@ class SignUpController extends GetxController {
   final phoneNumber = TextEditingController();
   GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
 
-  ///SIGNUP
+  /// Signup
   void signup() async {
     try {
 
-      ///START LOADING
+      /// Start Loading
       TFullScreenLoader.openLoadingDialog(
           'We are processing your information...', TImages.docerAnimation);
 
-
-      ///CHECK INTERNET CONNECTIVITY
+      /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {
+        /// Stop Loading
         TFullScreenLoader.stopLoading();
         return;
       }
 
-
-      ///FROM VALIDATION
-      if (!signupFormKey.currentState!.validate()){
+      /// Form Validation
+      if (!signupFormKey.currentState!.validate()) {
+        /// Stop Loading
         TFullScreenLoader.stopLoading();
         return;
       }
 
-      //PRIVACY POLICY CHECK
+      /// Privacy Policy Check
       if (!privacyPolicy.value) {
         TLoaders.warningSnackBar(
           title: 'Accept Privacy Policy',
@@ -55,10 +55,10 @@ class SignUpController extends GetxController {
         return;
       }
 
-      //register user in the firebase authentication & save data in the user data in the firebase
+      /// Register user in the Firebase Authentication & Save ser data in the firebase
       final userCredential =  await AuthenticationRepository.instance.registerWithEmailAndPassword(email.text.trim(), password.text.trim());
 
-      //save authenticated user data in the firebase firestore
+      /// Save Authenticated user data in the Firebase Firestore
       final newUser = UserModel(
         id: userCredential.user!.uid,
         firstName: firstName.text.trim(),
@@ -71,17 +71,22 @@ class SignUpController extends GetxController {
       final userRepository  = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
 
-      //Stop Loading
+      /// Stop Loading
       TFullScreenLoader.stopLoading();
 
-      //show success messages
+      /// Show success messages
       TLoaders.successSnackBar(title: 'Congratulations', message: 'Your Account has been created! verify email to continue.');
-      //move to verify email screen
+
+      /// Move to verify email screen
       Get.to(() => const VerifyEmailScreen());
+
     } catch (e) {
-      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
-    } finally {
+
+      /// Stop Loading
       TFullScreenLoader.stopLoading();
+
+      /// Show some Generic Error to the user
+      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     }
   }
 }
