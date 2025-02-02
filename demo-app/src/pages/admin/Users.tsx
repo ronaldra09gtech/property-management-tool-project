@@ -1,0 +1,89 @@
+import React from 'react';
+import { UserPlus, Shield, Building2 } from 'lucide-react';
+
+const users = [
+  {
+    id: '1',
+    name: 'John Smith',
+    email: 'john.smith@example.com',
+    role: 'Property Manager',
+    department: 'Operations',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    id: '2',
+    name: 'Sarah Wilson',
+    email: 'sarah.wilson@example.com',
+    role: 'Maintenance Supervisor',
+    department: 'Maintenance',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+];
+
+export default function Users() {
+  return (
+    <div>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-semibold text-gray-900">Users</h1>
+        <button className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+          <UserPlus className="h-5 w-5 mr-2" />
+          Add User
+        </button>
+      </div>
+
+      <div className="bg-white shadow-sm rounded-lg overflow-hidden">
+        <ul role="list" className="divide-y divide-gray-200">
+          {users.map((user) => (
+            <li key={user.id} className="hover:bg-gray-50">
+              <div className="px-4 py-4 sm:px-6">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img
+                      className="h-10 w-10 rounded-full"
+                      src={user.imageUrl}
+                      alt={user.name}
+                    />
+                    <div className="ml-4">
+                      <div className="flex items-center">
+                        <h3 className="text-sm font-medium text-gray-900">{user.name}</h3>
+                        <span
+                          className={`ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                            user.status === 'active'
+                              ? 'bg-green-100 text-green-800'
+                              : 'bg-gray-100 text-gray-800'
+                          }`}
+                        >
+                          {user.status.charAt(0).toUpperCase() + user.status.slice(1)}
+                        </span>
+                      </div>
+                      <div className="mt-2 flex items-center text-sm text-gray-500">
+                        <Shield className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
+                        {user.role}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end">
+                    <div className="text-sm text-gray-500">{user.email}</div>
+                    <div className="mt-2 flex items-center text-sm text-gray-500">
+                      <Building2 className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
+                      {user.department}
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-2 sm:flex sm:justify-between">
+                  <div className="sm:flex">
+                    <button className="text-indigo-600 hover:text-indigo-900">Edit</button>
+                    <span className="mx-2 text-gray-500">|</span>
+                    <button className="text-red-600 hover:text-red-900">Deactivate</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
