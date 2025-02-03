@@ -1,0 +1,102 @@
+{
+  "common": {
+    "appName": "PropManager",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "confirm": "Confirm",
+    "search": "Search...",
+    "openSidebar": "Open sidebar",
+    "viewNotifications": "View notifications",
+    "openUserMenu": "Open user menu"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "properties": "Properties",
+    "maintenance": "Maintenance",
+    "tenants": "Tenants",
+    "contracts": "Contracts",
+    "bookings": "Bookings",
+    "reports": "Reports",
+    "users": "Users",
+    "settings": "Settings",
+    "profile": "Profile",
+    "signOut": "Sign Out"
+  },
+  "settings": {
+    "title": "Settings",
+    "general": "General Settings",
+    "language": "Language",
+    "languageHelp": "Select your interface language",
+    "companyName": "Company Name",
+    "supportEmail": "Support Email",
+    "timezone": "Timezone",
+    "maintenance": "Maintenance Settings",
+    "autoAssign": "Auto-assign maintenance requests",
+    "notifications": "Enable email notifications"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "generateReport": "Generate Report",
+    "totalRevenue": "Total Revenue",
+    "totalProperties": "Total Properties",
+    "activeTenants": "Active Tenants",
+    "maintenanceRequests": "Maintenance Requests",
+    "revenueOverview": "Revenue Overview",
+    "recentActivity": "Recent Activity"
+  },
+  "properties": {
+    "title": "Properties",
+    "addProperty": "Add Property",
+    "units": "Units",
+    "occupied": "Occupied",
+    "viewDetails": "View Details"
+  },
+  "maintenance": {
+    "title": "Maintenance Requests",
+    "newRequest": "New Request",
+    "emergency": "Emergency",
+    "pending": "Pending",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "request": "Request",
+    "propertyUnit": "Property / Unit",
+    "priority": "Priority",
+    "status": "Status",
+    "created": "Created"
+  },
+  "tenants": {
+    "title": "Tenants",
+    "addTenant": "Add Tenant",
+    "totalTenants": "Total Tenants",
+    "activeLeases": "Active Leases",
+    "pendingApplications": "Pending Applications",
+    "supportRequests": "Support Requests",
+    "moveInDate": "Move-in Date",
+    "viewProfile": "View Profile"
+  },
+  "contracts": {
+    "title": "Contracts",
+    "newContract": "New Contract",
+    "contractDetails": "Contract Details",
+    "propertyUnit": "Property / Unit",
+    "duration": "Duration",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "bookings": {
+    "title": "Bookings",
+    "calendarView": "Calendar View",
+    "client": "Client",
+    "propertyDetails": "Property Details",
+    "dateTime": "Date & Time",
+    "status": "Status",
+    "actions": "Actions"
+  }
+}

@@ -2,8 +2,10 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'manager' | 'tenant' | 'contractor';
+  role: 'admin' | 'manager' | 'tenant' | 'contractor' | 'owner';
   department?: string;
+  phone?: string;
+  imageUrl?: string;
 }
 
 export interface Property {
@@ -13,6 +15,10 @@ export interface Property {
   units: Unit[];
   imageUrl: string;
   status: 'active' | 'inactive';
+  owner: User;
+  propertyManager: User;
+  revenue: number;
+  occupancyRate: number;
   createdAt: string;
   updatedAt: string;
 }

@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #4F46E5;
+  --color-secondary: #6366F1;
+  --color-text: #111827;
+  --color-background: #F9FAFB;
+  --color-component: #FFFFFF;
+  --color-accent: #3B82F6;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-component {
+  background-color: var(--color-component);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--color-primary);
+}
+
+.focus\:ring-secondary:focus {
+  --tw-ring-color: var(--color-secondary);
+}

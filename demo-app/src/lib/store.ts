@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { supabase } from './supabase';
+import type { ThemeSettings } from './api/settings';
 
 interface AuthState {
   user: any | null;
@@ -8,6 +9,11 @@ interface AuthState {
   signIn: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   initialize: () => Promise<void>;
+}
+
+interface ThemeState {
+  settings: ThemeSettings | null;
+  setSettings: (settings: ThemeSettings) => void;
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
@@ -41,4 +47,9 @@ export const useAuthStore = create<AuthState>((set) => ({
       });
     });
   },
+}));
+
+export const useThemeStore = create<ThemeState>((set) => ({
+  settings: null,
+  setSettings: (settings) => set({ settings }),
 }));
