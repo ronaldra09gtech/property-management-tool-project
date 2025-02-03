@@ -295,4 +295,4 @@ export async function deleteProperty(id: string) {
   if (error) throw error;
 }
 
-export { createProperty }
+// export { createProperty }
