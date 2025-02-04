@@ -22,7 +22,7 @@ class TPropertyAttributes extends StatelessWidget {
                 Row(
                   children: [
                     TSectionHeading(
-                      title: 'Description',
+                      title: '説明',
                       showActionButton: false,
                     ),
                     SizedBox(
@@ -32,7 +32,7 @@ class TPropertyAttributes extends StatelessWidget {
                 ),
                 TPropertyTitleText(
                   title:
-                      "A house tour is a guided or self-guided visit to a house, where visitors can learn about the house's history, design, and residents. House tours can take place in homes, estates, and historic buildings",
+                      "ハウス ツアーとは、ガイド付きまたはセルフガイドで住宅を訪問することで、訪問者はその家の歴史、デザイン、居住者について学ぶことができます。ハウスツアーは住宅、不動産、歴史的建造物で開催できます",
                   smallSize: true,
                   maxLines: 10,
                 )
@@ -43,14 +43,14 @@ class TPropertyAttributes extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ChoiceChip(
-              label: const Text('Schedule for Viewing'
+              label: const Text('観覧スケジュール'
                   ''),
               selected: false,
               onSelected: (value) {},
             ),
             SizedBox(width: TSizes.spaceBtwItems),
             ChoiceChip(
-              label: const Text('Rent'),
+              label: const Text('家賃'),
               selected: false,
               onSelected: (value) {},
             )

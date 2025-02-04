@@ -27,7 +27,7 @@ class TCategoryTab extends StatelessWidget {
                 ],
               ),
               TSectionHeading(
-                title: 'You might like',
+                title: 'それは必要ありません',
                 onPressed: () {},
               ),
               const SizedBox(

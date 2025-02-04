@@ -29,7 +29,7 @@ class SignUpController extends GetxController {
 
       /// Start Loading
       TFullScreenLoader.openLoadingDialog(
-          'We are processing your information...', TImages.docerAnimation);
+          '私たちはあなたの情報を処理しています...', TImages.docerAnimation);
 
       /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -49,8 +49,8 @@ class SignUpController extends GetxController {
       /// Privacy Policy Check
       if (!privacyPolicy.value) {
         TLoaders.warningSnackBar(
-          title: 'Accept Privacy Policy',
-          message: 'In order to create account, you must have read nd accept the Privacy Policy & Terms of Use.'
+          title: 'プライバシーポリシーに同意する',
+          message: 'アカウントを作成するには、プライバシー ポリシーと利用規約を読み、同意する必要があります。'
         );
         return;
       }
@@ -75,7 +75,7 @@ class SignUpController extends GetxController {
       TFullScreenLoader.stopLoading();
 
       /// Show success messages
-      TLoaders.successSnackBar(title: 'Congratulations', message: 'Your Account has been created! verify email to continue.');
+      TLoaders.successSnackBar(title: 'おめでとう', message: 'アカウントが作成されました!続行するには電子メールを確認してください。');
 
       /// Move to verify email screen
       Get.to(() => const VerifyEmailScreen());

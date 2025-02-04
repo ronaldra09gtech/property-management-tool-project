@@ -18,7 +18,7 @@ class THomeCategories extends StatelessWidget {
         itemBuilder: (_, index) {
           return TVerticalImageText(
             image: TImages.residential,
-            title: 'House',
+            title: '家',
             onTap: () {},
           );
         },

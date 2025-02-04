@@ -12,7 +12,7 @@ class TPropertyReviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(
-        title: Text('Reviews & Ratings'),
+        title: Text('レビューと評価'),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -22,7 +22,7 @@ class TPropertyReviewScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                  "Ratings and reviews are verified and from people who use the same type of advice that you use"),
+                  "評価とレビューは検証され、あなたが使用するのと同じ種類のアドバイスを使用する人々からのものです。"),
               SizedBox(height: TSizes.spaceBtwItems),
               const TOverAllPropertyRating(),
               TRatingIndicator(rating: 4.9),

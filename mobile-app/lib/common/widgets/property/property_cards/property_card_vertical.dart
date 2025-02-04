@@ -71,11 +71,11 @@ class TPropertyCardVartical extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const TPropertyTitleText(
-                      title: 'Town House', smallSize: true),
+                      title: 'タウンハウス', smallSize: true),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
                   Row(
                     children: [
-                      Text('Robinsosn Land Corp.',
+                      Text('ロビンソンランドコーポレーション',
                           overflow: TextOverflow.ellipsis,
                           maxLines: 2,
                           style: Theme.of(context).textTheme.labelMedium),

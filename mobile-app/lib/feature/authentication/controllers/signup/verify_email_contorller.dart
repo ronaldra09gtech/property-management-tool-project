@@ -20,7 +20,7 @@ class VerifyEmailController extends GetxController {
   sendEmailVerification() async {
     try {
       await AuthenticationRepository.instance.sendEmailVerification();
-      TLoaders.successSnackBar(title: 'Email Sent', message: 'Please Check you inbox and verify your email.');
+      TLoaders.successSnackBar(title: 'メール送信済み', message: '受信箱をチェックしてメールを確認してください。');
     } catch (e) {
       TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
     }

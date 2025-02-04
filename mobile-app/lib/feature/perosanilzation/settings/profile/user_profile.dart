@@ -18,12 +18,12 @@ class TUserProfile extends StatelessWidget {
         height: 50,
         padding: 0,
       ),
-      title: Text('Ronald Avila',
+      title: Text('ロナルド・アビラ',
           style: Theme.of(context)
               .textTheme
               .headlineSmall!
               .apply(color: TColors.white)),
-      subtitle: Text('support@coding.com',
+      subtitle: Text('support@gmail.com',
           style: Theme.of(context)
               .textTheme
               .bodyMedium!

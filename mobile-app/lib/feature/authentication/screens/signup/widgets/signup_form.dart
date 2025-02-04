@@ -27,7 +27,7 @@ class TSignupForm extends StatelessWidget {
                 child: TextFormField(
                   controller: controller.firstName,
                   validator: (value) =>
-                      TValidator.validateEmptyText('First Name', value),
+                      TValidator.validateEmptyText('ファーストネーム', value),
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: TTexts.firstName,
@@ -41,7 +41,7 @@ class TSignupForm extends StatelessWidget {
                 child: TextFormField(
                   controller: controller.lastName,
                   validator: (value) =>
-                      TValidator.validateEmptyText('Last Name', value),
+                      TValidator.validateEmptyText('苗字', value),
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: TTexts.lastName,

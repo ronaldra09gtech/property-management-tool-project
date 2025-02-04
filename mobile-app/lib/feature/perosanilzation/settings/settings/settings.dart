@@ -24,7 +24,7 @@ class SettingScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TAppBar(
-                      title: Text('Account',
+                      title: Text('アカウント',
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium!
@@ -42,47 +42,47 @@ class SettingScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TSectionHeading(
-                      title: 'Account Settings', showActionButton: false),
+                      title: 'アカウント設定', showActionButton: false),
                   SizedBox(height: TSizes.spaceBtwSections),
                   TUserListTile(
                       icon: Iconsax.safe_home,
-                      title: 'My Address',
+                      title: '私の住所',
                       subTitle: '',
                       onTap: () {}),
                   TUserListTile(
                       icon: Iconsax.bill,
-                      title: 'Bills',
-                      subTitle: 'Check for Bills ',
+                      title: '請求書',
+                      subTitle: '請求書を確認する',
                       onTap: () {}),
                   TUserListTile(
                       icon: Iconsax.bank,
-                      title: 'Bank Aaccount',
-                      subTitle: 'Withdraw balance to register bank account',
+                      title: '銀行口座',
+                      subTitle: '残高を引き出して銀行口座を登録する',
                       onTap: () {}),
                   TUserListTile(
                       icon: Iconsax.notification,
-                      title: 'Notification',
-                      subTitle: 'Set any kind of notification messages',
+                      title: '通知',
+                      subTitle: 'あらゆる種類の通知メッセージを設定します',
                       onTap: () {}),
                   TUserListTile(
                       icon: Iconsax.security_card,
-                      title: 'Account Privacy',
+                      title: 'アカウントのプライバシー',
                       subTitle: '',
                       onTap: () {}),
                   SizedBox(height: TSizes.spaceBtwSections),
                   TSectionHeading(
-                      title: 'App Settings', showActionButton: false),
+                      title: 'アプリの設定', showActionButton: false),
                   TUserListTile(
                       icon: Iconsax.call,
-                      title: 'Contact Support',
-                      subTitle: 'Helps you with any abnormalities in the app ',
+                      title: 'サポートに連絡する',
+                      subTitle: 'アプリの異常を解決します',
                       onTap: () {}),
                   SizedBox(height: TSizes.spaceBtwSections),
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
                         onPressed: () => Get.to(() => const LoginScreen()),
-                        child: const Text('Logout')),
+                        child: const Text('ログアウト')),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5)
                 ],

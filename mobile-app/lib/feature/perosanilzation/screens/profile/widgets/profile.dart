@@ -14,7 +14,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
-        title: Text('Profile'),
+        title: Text('プロフィール'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -32,7 +32,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: const Text('Change Profile Picture')),
+                        child: const Text('プロフィール写真の変更')),
                   ],
                 ),
               ),
@@ -40,31 +40,31 @@ class ProfileScreen extends StatelessWidget {
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
               const TSectionHeading(
-                  title: 'Profile Information', showActionButton: false),
+                  title: 'プロフィール情報', showActionButton: false),
               const SizedBox(height: TSizes.spaceBtwItems),
               ProfileMenu(
-                  onPressed: () {}, title: 'Name', value: 'Ronald Avila'),
+                  onPressed: () {}, title: '名前', value: 'ロナルド・アビラ'),
               ProfileMenu(
-                  onPressed: () {}, title: 'UserName', value: 'Ra45645655'),
+                  onPressed: () {}, title: 'ユーザー名', value: 'Ra45645655'),
               const SizedBox(height: TSizes.spaceBtwItems),
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
               const TSectionHeading(
-                  title: 'Personal Information', showActionButton: false),
+                  title: '個人情報', showActionButton: false),
               const SizedBox(height: TSizes.spaceBtwItems),
-              ProfileMenu(onPressed: () {}, title: 'UserID', value: '88754121'),
+              ProfileMenu(onPressed: () {}, title: 'ユーザーID', value: '八千八百七十五万四千百二十一'),
               ProfileMenu(
                   onPressed: () {},
-                  title: 'E-mail',
-                  value: 'Ra45645655@gmail.com'),
+                  title: '電子メール',
+                  value: 'ra45645655@gmail.com'),
               ProfileMenu(
                   onPressed: () {},
-                  title: 'Phone Number',
+                  title: '電話番号',
                   value: '+63 956-002-8874'),
               ProfileMenu(
                   onPressed: () {},
-                  title: 'Date of Birth',
-                  value: '10 July 1996'),
+                  title: '生年月日',
+                  value: '1996 年 7 月 10 日'),
             ],
           ),
         ),

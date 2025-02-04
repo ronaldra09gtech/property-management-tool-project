@@ -63,7 +63,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '問題が発生しました。もう一度試してください';
     }
   }
 
@@ -82,7 +82,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '問題が発生しました。もう一度試してください';
     }
   }
 
@@ -99,7 +99,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '問題が発生しました。もう一度試してください';
     }
   }
 
@@ -126,7 +126,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '問題が発生しました。もう一度試してください';
     }
   }
 }

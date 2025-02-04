@@ -16,7 +16,7 @@ class FavouriteScreen extends StatelessWidget {
     return Scaffold(
       appBar: TAppBar(
         title: Text(
-          'Favourites',
+          'お気に入り',
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         actions: [

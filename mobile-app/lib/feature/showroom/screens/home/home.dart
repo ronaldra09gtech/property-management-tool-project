@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
                   THomeAppBar(),
                   SizedBox(height: TSizes.spaceBtwSections),
                   TSearchContainer(
-                    text: 'Search Property',
+                    text: '物件の検索',
                   ),
                   SizedBox(height: TSizes.spaceBtwSections),
                   Padding(
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         TSectionHeading(
-                          title: 'Category',
+                          title: 'カテゴリ',
                           showActionButton: false,
                           textColor: Colors.white,
                         ),
@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: TSizes.spaceBtwSections),
                   TSectionHeading(
-                    title: 'Popular Property',
+                    title: '人気物件',
                     onPressed: () {},
                   ),
                   SizedBox(height: TSizes.spaceBtwSections),

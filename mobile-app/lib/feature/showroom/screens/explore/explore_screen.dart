@@ -22,7 +22,7 @@ class ExploreScreen extends StatelessWidget {
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
-            'Explore',
+            '探検する',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
@@ -47,7 +47,7 @@ class ExploreScreen extends StatelessWidget {
                         height: TSizes.spaceBtwItems,
                       ),
                       TSearchContainer(
-                        text: 'Explore',
+                        text: '探検する',
                         showborder: true,
                         showBackground: false,
                         padding: EdgeInsets.zero,
@@ -55,7 +55,7 @@ class ExploreScreen extends StatelessWidget {
                       SizedBox(
                         height: TSizes.spaceBtwSections,
                       ),
-                      TSectionHeading(title: 'Real Estate', onPressed: () {}),
+                      TSectionHeading(title: '不動産', onPressed: () {}),
                       SizedBox(
                         height: TSizes.spaceBtwItems / 1.5,
                       ),
@@ -69,11 +69,11 @@ class ExploreScreen extends StatelessWidget {
                   ),
                 ),
                 bottom: const TTabBar(tabs: [
-                  Tab(child: Text('Residential')),
-                  Tab(child: Text('Commercial')),
-                  Tab(child: Text('Industrial')),
-                  Tab(child: Text('Land')),
-                  Tab(child: Text('Special Purpose'))
+                  Tab(child: Text('居住の')),
+                  Tab(child: Text('コマーシャル')),
+                  Tab(child: Text('産業用')),
+                  Tab(child: Text('土地')),
+                  Tab(child: Text('特別な目的'))
                 ]),
               )
             ];
