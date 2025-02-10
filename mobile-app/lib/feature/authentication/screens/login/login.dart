@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:tranquilestate/common/styles/spacing_styles.dart';
 import 'package:tranquilestate/common/widgets/login_signup/form_divider.dart';
 import 'package:tranquilestate/common/widgets/login_signup/social_buttons.dart';
+import 'package:tranquilestate/feature/authentication/controllers/login/login_controller.dart';
 import 'package:tranquilestate/feature/authentication/screens/login/widgets/login_form.dart';
 import 'package:tranquilestate/feature/authentication/screens/login/widgets/login_header.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
