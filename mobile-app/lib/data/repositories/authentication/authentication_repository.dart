@@ -34,14 +34,16 @@ class AuthenticationRepository extends GetxController {
   screenRedirect() async {
     final user = _auth.currentUser;
     if (user != null) {
-      // if (user.emailVerified) {
-      //   Get.offAll(() => const NavigationMenu());
-      // } else {
-      //   Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
-      // }
-      Get.offAll(() => const NavigationMenu());
+      if (user.emailVerified) {
+        Get.offAll(() => const NavigationMenu());
+      } else {
+        Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
+      }
     } else {
+      /// Local Storage
       deviceStorage.writeIfNull('IsFirstTime', true);
+
+      /// Check if it's the frist time launching the app
       deviceStorage.read('IsFirstTime') != true
           ? Get.offAll(() => LoginScreen())
           : Get.offAll(const OnBoardingScreen());
