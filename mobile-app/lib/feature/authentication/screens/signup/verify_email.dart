@@ -20,7 +20,6 @@ class VerifyEmailScreen extends StatelessWidget {
     final controller = Get.put(VerifyEmailController());
 
     return Scaffold(
-
       /// App Bar
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -36,7 +35,6 @@ class VerifyEmailScreen extends StatelessWidget {
           padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-
               /// Image
               Image(
                 image: AssetImage(TImages.deliveredEmailIllustration),
@@ -69,7 +67,8 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                    onPressed: () => controller.sendEmailVerification(), child: const Text(TTexts.resendEmail)),
+                    onPressed: () => controller.sendEmailVerification(),
+                    child: const Text(TTexts.resendEmail)),
               ),
             ],
           ),

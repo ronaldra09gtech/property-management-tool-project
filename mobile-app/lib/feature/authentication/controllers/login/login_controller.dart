@@ -75,7 +75,8 @@ class LoginController extends GetxController {
   Future<void> googleSignIn() async {
     try {
       /// Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging you in...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog(
+          'Logging you in...', TImages.docerAnimation);
 
       /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -85,7 +86,8 @@ class LoginController extends GetxController {
       }
 
       /// Goole Authentication
-      final userCredentials = await AuthenticationRepository.instance.signInWithGoogle();
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
 
       /// Save User Record
       await userController.saveUserRecord(userCredentials);

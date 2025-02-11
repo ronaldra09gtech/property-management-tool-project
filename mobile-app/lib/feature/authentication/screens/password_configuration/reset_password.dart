@@ -29,7 +29,6 @@ class ResetPasswordScreen extends StatelessWidget {
           padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-
               /// Image
               Image(
                   image: const AssetImage(TImages.deliveredEmailIllustration),
@@ -58,7 +57,8 @@ class ResetPasswordScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () => ForgetPasswordController.instance.resendPasswordResetEmail(email),
+                  onPressed: () => ForgetPasswordController.instance
+                      .resendPasswordResetEmail(email),
                   child: const Text(TTexts.resendEmail),
                 ),
               ),

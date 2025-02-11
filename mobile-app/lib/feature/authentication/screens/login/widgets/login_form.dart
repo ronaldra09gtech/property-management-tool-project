@@ -25,7 +25,6 @@ class TLoginForm extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
-
             ///Email
             TextFormField(
               controller: controller.email,

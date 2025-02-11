@@ -15,12 +15,10 @@ class TLoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         /// Top Logo
         Image(
           height: 150,
-          image: AssetImage(
-              dark ? TImages.lightAppLogo : TImages.darkAppLogo),
+          image: AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo),
         ),
 
         /// Login Title

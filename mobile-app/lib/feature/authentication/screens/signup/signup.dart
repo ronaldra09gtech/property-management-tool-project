@@ -19,7 +19,6 @@ class SignupScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               /// Title
               Text(
                 TTexts.signupTitle,

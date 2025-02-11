@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tranquilestate/common/widgets/appbar/appbar.dart';
 import 'package:tranquilestate/common/widgets/images/t_circular_image.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
-import 'package:tranquilestate/feature/settings/screen/profile/widgets/profile_menu.dart';
+import 'package:tranquilestate/feature/perosanilzation/controller/user_controller.dart';
+import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/change_name.dart';
+import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile_menu.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
@@ -11,6 +14,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
@@ -43,24 +47,24 @@ class ProfileScreen extends StatelessWidget {
                   title: 'Profile Information', showActionButton: false),
               const SizedBox(height: TSizes.spaceBtwItems),
               ProfileMenu(
-                  onPressed: () {}, title: 'Name', value: 'Ronald Avila'),
+                  onPressed: () => Get.to(() => const ChangeName()), title: 'Name', value: controller.user.value.fullName),
               ProfileMenu(
-                  onPressed: () {}, title: 'UserName', value: 'Ra45645655'),
+                  onPressed: () {}, title: 'UserName', value: controller.user.value.userName),
               const SizedBox(height: TSizes.spaceBtwItems),
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
               const TSectionHeading(
                   title: 'Personal Information', showActionButton: false),
               const SizedBox(height: TSizes.spaceBtwItems),
-              ProfileMenu(onPressed: () {}, title: 'UserID', value: '88754121'),
+              ProfileMenu(onPressed: () {}, title: 'UserID', value: controller.user.value.id),
               ProfileMenu(
                   onPressed: () {},
                   title: 'E-mail',
-                  value: 'Ra45645655@gmail.com'),
+                  value: controller.user.value.email),
               ProfileMenu(
                   onPressed: () {},
                   title: 'Phone Number',
-                  value: '+63 956-002-8874'),
+                  value: controller.user.value.phoneNumber),
               ProfileMenu(
                   onPressed: () {},
                   title: 'Date of Birth',

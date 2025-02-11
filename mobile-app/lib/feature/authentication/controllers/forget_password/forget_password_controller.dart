@@ -48,7 +48,6 @@ class ForgetPasswordController extends GetxController {
 
       /// Redirect
       Get.to(() => ResetPasswordScreen(email: email.text.trim()));
-
     } catch (e) {
       /// Remove Loader
       TFullScreenLoader.stopLoading();
@@ -86,7 +85,6 @@ class ForgetPasswordController extends GetxController {
       TLoaders.successSnackBar(
           title: 'Email Sent',
           message: 'Email Link Sent to Reset your Password'.tr);
-
     } catch (e) {
       /// Remove Loader
       TFullScreenLoader.stopLoading();
