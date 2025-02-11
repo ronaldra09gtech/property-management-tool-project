@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
-import 'package:tranquilestate/utils/loaders/shimmer.dart';
+import 'package:tranquilestate/common/widgets/shimmers/shimmer.dart';
 
 class TCircularImage extends StatelessWidget {
   const TCircularImage({

@@ -8,6 +8,7 @@ import 'package:tranquilestate/common/widgets/custom_shapes/search_container.dar
 import 'package:tranquilestate/common/widgets/layouts/grid_layout.dart';
 import 'package:tranquilestate/common/widgets/property/property_cards/category_tab.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
+import 'package:tranquilestate/feature/showroom/controller/category_controller.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/helpers/helper_functions.dart';
@@ -17,8 +18,9 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categories = CategoryController.instance.featuredCategories;
     return DefaultTabController(
-      length: 4,
+      length: categories.length,
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
@@ -68,23 +70,18 @@ class ExploreScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                bottom: const TTabBar(tabs: [
-                  Tab(child: Text('Residential')),
-                  Tab(child: Text('Commercial')),
-                  Tab(child: Text('Industrial')),
-                  Tab(child: Text('Land')),
-                  Tab(child: Text('Special Purpose'))
-                ]),
+                bottom: TTabBar(
+                  tabs: categories
+                      .map((category) => Tab(child: Text(category.name)))
+                      .toList(),
+                ),
               )
             ];
           },
-          body: TabBarView(children: [
-            TCategoryTab(),
-            TCategoryTab(),
-            TCategoryTab(),
-            TCategoryTab(),
-            TCategoryTab(),
-          ]),
+          body: TabBarView(
+              children: categories
+                  .map((category) => TCategoryTab(category: category))
+                  .toList()),
         ),
       ),
     );

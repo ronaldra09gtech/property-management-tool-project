@@ -3,11 +3,14 @@ import 'package:tranquilestate/common/widgets/layouts/grid_layout.dart';
 import 'package:tranquilestate/common/widgets/property/property_cards/property_card_vertical.dart';
 import 'package:tranquilestate/common/widgets/property/property_cards/property_showcase.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
+import 'package:tranquilestate/feature/showroom/models/category_model.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
 class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
+  const TCategoryTab({super.key, required this.category});
+
+  final CategoryModel category;
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/c
 import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile_menu.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
-import 'package:tranquilestate/utils/loaders/shimmer.dart';
+import 'package:tranquilestate/common/widgets/shimmers/shimmer.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

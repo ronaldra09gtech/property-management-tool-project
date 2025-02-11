@@ -4,7 +4,7 @@ import 'package:tranquilestate/common/widgets/appbar/appbar.dart';
 import 'package:tranquilestate/feature/perosanilzation/controller/user_controller.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/text_strings.dart';
-import 'package:tranquilestate/utils/loaders/shimmer.dart';
+import 'package:tranquilestate/common/widgets/shimmers/shimmer.dart';
 
 class THomeAppBar extends StatelessWidget {
   const THomeAppBar({
