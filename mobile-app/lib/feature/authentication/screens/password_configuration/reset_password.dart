@@ -45,14 +45,6 @@ class ResetPasswordScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.labelMedium,
                   textAlign: TextAlign.center),
               const SizedBox(height: TSizes.spaceBtwSections),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(TTexts.done),
-                ),
-              ),
-              const SizedBox(height: TSizes.spaceBtwItems),
 
               /// Buttons
               SizedBox(
