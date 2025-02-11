@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:tranquilestate/data/repositories/user/user_repository.dart';
 import 'package:tranquilestate/feature/perosanilzation/controller/user_controller.dart';
-import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile.dart';
+import 'package:tranquilestate/feature/perosanilzation/screens/profile/profile.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/helpers/network_manager.dart';
 import 'package:tranquilestate/utils/popups/full_screen_loader.dart';

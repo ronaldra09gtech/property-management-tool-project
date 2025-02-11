@@ -6,8 +6,8 @@ import 'package:tranquilestate/common/widgets/custom_shapes/containers/primary_h
 import 'package:tranquilestate/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
 import 'package:tranquilestate/feature/authentication/screens/login/login.dart';
-import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile.dart';
-import 'package:tranquilestate/feature/perosanilzation/screens/profile/user_profile.dart';
+import 'package:tranquilestate/feature/perosanilzation/screens/profile/profile.dart';
+import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/user_profile.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 

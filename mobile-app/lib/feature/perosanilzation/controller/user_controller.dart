@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:tranquilestate/data/repositories/authentication/authentication_repository.dart';
 import 'package:tranquilestate/feature/authentication/screens/login/login.dart';
 import 'package:tranquilestate/feature/authentication/screens/re_authenticate_user/re_authenticate_user_login_form.dart';
@@ -20,6 +21,7 @@ class UserController extends GetxController {
   Rx<UserModel> user = UserModel.empty().obs;
   final userRepository = Get.put(UserRepository());
   final hidePassword = false.obs;
+  final imageUploading = false.obs;
   final verifyEmail = TextEditingController();
   final verifyPassword = TextEditingController();
   GlobalKey<FormState> reAuthFormKey = GlobalKey<FormState>();
@@ -46,6 +48,10 @@ class UserController extends GetxController {
   /// Save user Record from any Registration provider
   Future<void> saveUserRecord(UserCredential? userCredentials) async {
     try {
+      /// First Update Rx User and then check if user data is already stored. If not store new data
+      await fetchUserRecord();
+
+      /// If not record already stored
       if (userCredentials != null) {
         ///Convert Name to First and Last name
         final nameParts =
@@ -126,6 +132,7 @@ class UserController extends GetxController {
     }
   }
 
+  /// Re Authenticate before deleting
   Future<void> reAuthenticateEmailAndPasswordUser() async {
     try {
       /// Start Loading
@@ -153,6 +160,39 @@ class UserController extends GetxController {
     } catch (e) {
       TFullScreenLoader.stopLoading();
       TLoaders.warningSnackBar(title: 'Oh Snap!', message: e.toString());
+    }
+  }
+
+  /// Upload Profile Image
+  uploadUserProfilePicture() async {
+    try {
+      final image = await ImagePicker().pickImage(
+          source: ImageSource.gallery,
+          imageQuality: 70,
+          maxHeight: 512,
+          maxWidth: 512);
+      if (image != null) {
+        imageUploading.value = true;
+        /// Upload Image
+        final imageUrl =
+            await userRepository.uploadImage('Users/Images/Profile/', image);
+
+        /// Update User Image Record
+        Map<String, dynamic> json = {'ProfilePicture': imageUrl};
+        await userRepository.updateSingleField(json);
+
+        user.value.profilePicture = imageUrl;
+        user.refresh();
+
+        TLoaders.successSnackBar(
+            title: 'Congratulations',
+            message: 'Your Profile Image has been updated!');
+      }
+    } catch (e) {
+      TLoaders.errorSnackBar(
+          title: 'OhSnap', message: 'Something went wrong: $e');
+    } finally {
+      imageUploading.value = false;
     }
   }
 }
