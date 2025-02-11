@@ -3,10 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tranquilestate/common/widgets/success_screen/success_screen.dart';
 import 'package:tranquilestate/data/repositories/authentication/authentication_repository.dart';
 import 'package:tranquilestate/feature/authentication/controllers/signup/verify_email_contorller.dart';
-import 'package:tranquilestate/feature/authentication/screens/login/login.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 import 'package:tranquilestate/utils/constants/text_strings.dart';

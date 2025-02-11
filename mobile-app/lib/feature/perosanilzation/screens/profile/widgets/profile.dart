@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tranquilestate/common/widgets/appbar/appbar.dart';
 import 'package:tranquilestate/common/widgets/images/t_circular_image.dart';
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
-import 'package:tranquilestate/feature/perosanilzation/settings/profile/widgets/profile_menu.dart';
+import 'package:tranquilestate/feature/settings/screen/profile/widgets/profile_menu.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 

@@ -7,7 +7,7 @@ import 'package:tranquilestate/common/widgets/list_tiles/user_profile_tile.dart'
 import 'package:tranquilestate/common/widgets/text/section_heading.dart';
 import 'package:tranquilestate/feature/authentication/screens/login/login.dart';
 import 'package:tranquilestate/feature/perosanilzation/screens/profile/widgets/profile.dart';
-import 'package:tranquilestate/feature/perosanilzation/settings/profile/user_profile.dart';
+import 'package:tranquilestate/feature/settings/screen/profile/user_profile.dart';
 import 'package:tranquilestate/utils/constants/colors.dart';
 import 'package:tranquilestate/utils/constants/sizes.dart';
 
