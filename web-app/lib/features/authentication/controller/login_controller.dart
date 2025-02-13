@@ -56,7 +56,8 @@ class LoginController extends GetxController {
       }
 
       /// Login user using Email & Password Authentication
-      await AuthenticationRepository.instance.loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+      await AuthenticationRepository.instance
+          .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
 
       /// Fetch user details and assign to UserController
       final user = await UserController.instance.fetchUserDetails();
@@ -65,9 +66,11 @@ class LoginController extends GetxController {
       TFullScreenLoader.stopLoading();
 
       /// If user is not admin, logout and return
-      if (user.role != AppRole.admin){
+      if (user.role != AppRole.admin) {
         await AuthenticationRepository.instance.logout();
-        TLoaders.errorSnackBar(title: 'Not Authorized', message: 'You are not authorized or do have access. Contact Admin');
+        TLoaders.errorSnackBar(
+            title: 'Not Authorized',
+            message: 'You are not authorized or do have access. Contact Admin');
       } else {
         /// Redirect
         AuthenticationRepository.instance.screenRedirect();
