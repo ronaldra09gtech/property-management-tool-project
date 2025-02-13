@@ -39,12 +39,11 @@ class AuthenticationRepository extends GetxController {
   screenRedirect() async {
     final user = _auth.currentUser;
     if (user != null) {
-      // if (user.emailVerified) {
-      //   Get.offAll(() => const NavigationMenu());
-      // } else {
-      //   Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
-      // }
-      Get.offAll(() => const NavigationMenu());
+      if (user.emailVerified) {
+        Get.offAll(() => const NavigationMenu());
+      } else {
+        Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
+      }
     } else {
       /// Local Storage
       deviceStorage.writeIfNull('IsFirstTime', true);
@@ -130,7 +129,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '何か問題が発生しました。もう一度試してください';
     }
   }
 
@@ -147,7 +146,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '何か問題が発生しました。もう一度試してください';
     }
   }
 
@@ -169,7 +168,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      if (kDebugMode) print('Something went wrong: $e');
+      if (kDebugMode) print('何か問題が発生しました: $e');
       return null;
     }
   }
@@ -209,7 +208,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '何か問題が発生しました。もう一度試してください';
     }
   }
 }

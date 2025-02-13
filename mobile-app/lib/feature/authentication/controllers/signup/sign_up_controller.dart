@@ -85,7 +85,7 @@ class SignUpController extends GetxController {
       TFullScreenLoader.stopLoading();
 
       /// Show some Generic Error to the user
-      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+      TLoaders.errorSnackBar(title: 'ああ、スナップ', message: e.toString());
     }
   }
 }

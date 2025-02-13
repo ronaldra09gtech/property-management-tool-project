@@ -12,97 +12,89 @@ class TFirebaseAuthException implements Exception {
   String get message {
     switch (code) {
       case 'email-already-in-use':
-        return 'The email address is already registered. Please use a different email.';
+        return 'このメールアドレスは既に登録されています。別のメールアドレスを使用してください。';
       case 'invalid-email':
-        return 'The email address provided is invalid. Please enter a valid email.';
+        return '入力されたメールアドレスが無効です。有効なメールアドレスを入力してください。';
       case 'weak-password':
-        return 'The password is too weak. Please choose a stronger password.';
+        return 'パスワードが弱すぎます。より強力なパスワードを選択してください。';
       case 'user-disabled':
-        return 'This user account has been disabled. Please contact support for assistance.';
+        return 'このユーザーアカウントは無効になっています。サポートに連絡してください。';
       case 'user-not-found':
-        return 'Invalid login details. User not found.';
+        return '無効なログイン情報です。ユーザーが見つかりません。';
       case 'wrong-password':
-        return 'Incorrect password. Please check your password and try again.';
+        return 'パスワードが間違っています。もう一度確認してください。';
       case 'invalid-verification-code':
-        return 'Invalid verification code. Please enter a valid code.';
+        return '確認コードが無効です。有効なコードを入力してください。';
       case 'invalid-verification-id':
-        return 'Invalid verification ID. Please request a new verification code.';
+        return '確認IDが無効です。新しい確認コードをリクエストしてください。';
       case 'quota-exceeded':
-        return 'Quota exceeded. Please try again later.';
+        return 'クォータを超えました。しばらくしてから再試行してください。';
       case 'email-already-exists':
-        return 'The email address already exists. Please use a different email.';
+        return 'このメールアドレスは既に存在します。別のメールアドレスを使用してください。';
       case 'provider-already-linked':
-        return 'The account is already linked with another provider.';
+        return 'このアカウントは別のプロバイダーと既にリンクされています。';
       case 'requires-recent-login':
-        return 'This operation is sensitive and requires recent authentication. Please log in again.';
+        return 'この操作には最近の認証が必要です。再度ログインしてください。';
       case 'credential-already-in-use':
-        return 'This credential is already associated with a different user account.';
+        return 'この認証情報は既に別のユーザーアカウントに関連付けられています。';
       case 'user-mismatch':
-        return 'The supplied credentials do not correspond to the previously signed in user.';
+        return '提供された認証情報が以前にサインインしたユーザーと一致しません。';
       case 'account-exists-with-different-credential':
-        return 'An account already exists with the same email but different sign-in credentials.';
+        return '同じメールアドレスのアカウントが異なる認証情報で既に存在します。';
       case 'operation-not-allowed':
-        return 'This operation is not allowed. Contact support for assistance.';
+        return 'この操作は許可されていません。サポートに連絡してください。';
       case 'expired-action-code':
-        return 'The action code has expired. Please request a new action code.';
+        return 'アクションコードの有効期限が切れています。新しいコードをリクエストしてください。';
       case 'invalid-action-code':
-        return 'The action code is invalid. Please check the code and try again.';
+        return 'アクションコードが無効です。コードを確認して再試行してください。';
       case 'missing-action-code':
-        return 'The action code is missing. Please provide a valid action code.';
+        return 'アクションコードが見つかりません。有効なアクションコードを入力してください。';
       case 'user-token-expired':
-        return 'The user\'s token has expired, and authentication is required. Please sign in again.';
-      case 'user-not-found':
-        return 'No user found for the given email or UID.';
+        return 'ユーザーのトークンの有効期限が切れています。再度ログインしてください。';
       case 'invalid-credential':
-        return 'The supplied credential is malformed or has expired.';
-      case 'wrong-password':
-        return 'The password is invalid. Please check your password and try again.';
+        return '提供された認証情報が無効または期限切れです。';
       case 'user-token-revoked':
-        return 'The user\'s token has been revoked. Please sign in again.';
+        return 'ユーザーのトークンが無効になりました。再度ログインしてください。';
       case 'invalid-message-payload':
-        return 'The email template verification message payload is invalid.';
+        return 'メールテンプレートの確認メッセージのペイロードが無効です。';
       case 'invalid-sender':
-        return 'The email template sender is invalid. Please verify the sender\'s email.';
+        return 'メールテンプレートの送信者が無効です。送信者のメールアドレスを確認してください。';
       case 'invalid-recipient-email':
-        return 'The recipient email address is invalid. Please provide a valid recipient email.';
+        return '受信者のメールアドレスが無効です。有効なメールアドレスを入力してください。';
       case 'missing-iframe-start':
-        return 'The email template is missing the iframe start tag.';
+        return 'メールテンプレートにiframeの開始タグがありません。';
       case 'missing-iframe-end':
-        return 'The email template is missing the iframe end tag.';
+        return 'メールテンプレートにiframeの終了タグがありません。';
       case 'missing-iframe-src':
-        return 'The email template is missing the iframe src attribute.';
+        return 'メールテンプレートにiframeのsrc属性がありません。';
       case 'auth-domain-config-required':
-        return 'The authDomain configuration is required for the action code verification link.';
+        return 'アクションコードの確認リンクにはauthDomainの設定が必要です。';
       case 'missing-app-credential':
-        return 'The app credential is missing. Please provide valid app credentials.';
+        return 'アプリの認証情報が不足しています。有効な認証情報を提供してください。';
       case 'invalid-app-credential':
-        return 'The app credential is invalid. Please provide a valid app credential.';
+        return 'アプリの認証情報が無効です。有効な認証情報を提供してください。';
       case 'session-cookie-expired':
-        return 'The Firebase session cookie has expired. Please sign in again.';
+        return 'Firebaseセッションクッキーの有効期限が切れました。再度ログインしてください。';
       case 'uid-already-exists':
-        return 'The provided user ID is already in use by another user.';
+        return '提供されたユーザーIDは既に使用されています。';
       case 'invalid-cordova-configuration':
-        return 'The provided Cordova configuration is invalid.';
+        return '提供されたCordovaの設定が無効です。';
       case 'app-deleted':
-        return 'This instance of FirebaseApp has been deleted.';
-      case 'user-disabled':
-        return 'The user account has been disabled.';
+        return 'このFirebaseAppインスタンスは削除されました。';
       case 'user-token-mismatch':
-        return 'The provided user\'s token has a mismatch with the authenticated user\'s user ID.';
+        return '提供されたユーザーのトークンが認証されたユーザーIDと一致しません。';
       case 'web-storage-unsupported':
-        return 'Web storage is not supported or is disabled.';
-      case 'invalid-credential':
-        return 'The supplied credential is invalid. Please check the credential and try again.';
+        return 'Webストレージがサポートされていないか、無効になっています。';
       case 'app-not-authorized':
-        return 'The app is not authorized to use Firebase Authentication with the provided API key.';
+        return 'このアプリは提供されたAPIキーでFirebase認証を使用する許可がありません。';
       case 'keychain-error':
-        return 'A keychain error occurred. Please check the keychain and try again.';
+        return 'キーチェーンエラーが発生しました。キーチェーンを確認してください。';
       case 'internal-error':
-        return 'An internal authentication error occurred. Please try again later.';
+        return '内部認証エラーが発生しました。後でもう一度試してください。';
       case 'INVALID_LOGIN_CREDENTIALS':
-        return 'Invalid login credentials.';
+        return '無効なログイン認証情報です。';
       default:
-        return 'An unexpected authentication error occurred. Please try again.';
+        return '予期しない認証エラーが発生しました。もう一度お試しください。';
     }
   }
 }

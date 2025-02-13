@@ -19,7 +19,7 @@ class ForgetPasswordController extends GetxController {
     try {
       /// Start Loading
       TFullScreenLoader.openLoadingDialog(
-          'Processing your request...', TImages.docerAnimation);
+          'リクエストを処理しています...', TImages.docerAnimation);
 
       /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -43,15 +43,15 @@ class ForgetPasswordController extends GetxController {
 
       /// Show Success Screen
       TLoaders.successSnackBar(
-          title: 'Email Sent',
-          message: 'Email Link Sent to Reset your Password'.tr);
+          title: 'メール送信済み',
+          message: 'パスワードをリセットするための電子メールリンクが送信されました'.tr);
 
       /// Redirect
       Get.to(() => ResetPasswordScreen(email: email.text.trim()));
     } catch (e) {
       /// Remove Loader
       TFullScreenLoader.stopLoading();
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(title: 'ああ、スナップ', message: e.toString());
     }
   }
 
@@ -60,7 +60,7 @@ class ForgetPasswordController extends GetxController {
     try {
       /// Start Loading
       TFullScreenLoader.openLoadingDialog(
-          'Processing your request...', TImages.docerAnimation);
+          'リクエストを処理しています...', TImages.docerAnimation);
 
       /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -83,12 +83,12 @@ class ForgetPasswordController extends GetxController {
 
       /// Show Success Screen
       TLoaders.successSnackBar(
-          title: 'Email Sent',
-          message: 'Email Link Sent to Reset your Password'.tr);
+          title: 'メール送信済み',
+          message: 'パスワードをリセットするための電子メールリンクが送信されました'.tr);
     } catch (e) {
       /// Remove Loader
       TFullScreenLoader.stopLoading();
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(title: 'ああ、スナップ', message: e.toString());
     }
   }
 }

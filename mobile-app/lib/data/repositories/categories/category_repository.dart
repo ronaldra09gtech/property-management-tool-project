@@ -24,7 +24,7 @@ class CategoryRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again';
+      throw '何か問題が発生しました。もう一度試してください';
     }
   }
 

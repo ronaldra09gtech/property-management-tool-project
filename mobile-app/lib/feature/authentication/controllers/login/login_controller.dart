@@ -67,7 +67,7 @@ class LoginController extends GetxController {
       TFullScreenLoader.stopLoading();
 
       /// Error Message
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(title: 'ああ、スナップ', message: e.toString());
     }
   }
 
@@ -76,7 +76,7 @@ class LoginController extends GetxController {
     try {
       /// Start Loading
       TFullScreenLoader.openLoadingDialog(
-          'Logging you in...', TImages.docerAnimation);
+          'ログインしています...', TImages.docerAnimation);
 
       /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -100,7 +100,7 @@ class LoginController extends GetxController {
     } catch (e) {
       /// Remove Loader
       TFullScreenLoader.stopLoading();
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(title: 'ああ、スナップ', message: e.toString());
     }
   }
 }
