@@ -25,7 +25,6 @@ class TLoginForm extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
-
             ///Email
             TextFormField(
               controller: controller.email,
@@ -72,7 +71,7 @@ class TLoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                  onPressed: () => Get.to(() => const ForgetPassword()),
+                  onPressed: () => Get.to(() => const ForgetPasswordScreen()),
                   child: const Text(TTexts.forgetPassword),
                 ),
               ],

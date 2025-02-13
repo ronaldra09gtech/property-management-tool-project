@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tranquilestate/common/widgets/image_text_widgets/vertical_image_text.dart';
+import 'package:tranquilestate/common/widgets/shimmers/category_shimmer.dart';
+import 'package:tranquilestate/feature/showroom/controller/category_controller.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
 
 class THomeCategories extends StatelessWidget {
@@ -9,20 +12,33 @@ class THomeCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: 4,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (_, index) {
-          return TVerticalImageText(
-            image: TImages.residential,
-            title: '家',
-            onTap: () {},
-          );
-        },
-      ),
-    );
+    final categoryController = Get.put(CategoryController());
+    return Obx(() {
+      if (categoryController.isLoading.value) return const TCategoryShimmer();
+      if (categoryController.featuredCategories.isEmpty) {
+        return Center(
+            child: Text('データが見つかりません',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium!
+                    .apply(color: Colors.white)));
+      }
+      return SizedBox(
+        height: 80,
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: categoryController.featuredCategories.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (_, index) {
+            final category = categoryController.featuredCategories[index];
+            return TVerticalImageText(
+              image: category.image,
+              title: category.name,
+              // onTap: () => Get.to(() => const SubCategoriesScreen()),
+            );
+          },
+        ),
+      );
+    });
   }
 }

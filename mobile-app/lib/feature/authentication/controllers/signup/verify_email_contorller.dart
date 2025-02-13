@@ -16,6 +16,7 @@ class VerifyEmailController extends GetxController {
     setTimerForAutoRedirect();
     super.onInit();
   }
+
   /// Send Email Verification Link
   sendEmailVerification() async {
     try {
@@ -29,35 +30,32 @@ class VerifyEmailController extends GetxController {
   /// Timer to automatically redirect on email verification
 
   setTimerForAutoRedirect() {
-    Timer.periodic(
-      const Duration(seconds: 2),
-        (timer) async {
-        await FirebaseAuth.instance.currentUser?.reload();
-        final user = FirebaseAuth.instance.currentUser;
-        if(user?.emailVerified ?? false){
-          timer.cancel();
-          Get.off(()=> SuccessScreen(
-              image: TImages.successfulPaymentIcon,
-              title: TTexts.yourAccountCreatedTitle,
-              subTitle: TTexts.yourAccountCreatedSubTitle,
-              onPressed: () => AuthenticationRepository.instance.screenRedirect()
-            )
-          );
-        }
+    Timer.periodic(const Duration(seconds: 1), (timer) async {
+      await FirebaseAuth.instance.currentUser?.reload();
+      final user = FirebaseAuth.instance.currentUser;
+      if (user?.emailVerified ?? false) {
+        timer.cancel();
+        Get.off(() => SuccessScreen(
+            image: TImages.successfulPaymentIcon,
+            title: TTexts.yourAccountCreatedTitle,
+            subTitle: TTexts.yourAccountCreatedSubTitle,
+            onPressed: () =>
+                AuthenticationRepository.instance.screenRedirect()));
       }
-    );
+    });
   }
 
   ///Manually Check if Email Verified
   checkEmailVerificationStatus() {
     final currentUser = FirebaseAuth.instance.currentUser;
     if (currentUser != null && currentUser.emailVerified) {
-      Get.off(() => SuccessScreen(
-          image: TImages.successfulPaymentIcon,
-          title: TTexts.yourAccountCreatedTitle,
-          subTitle: TTexts.yourAccountCreatedSubTitle,
-          onPressed: () => AuthenticationRepository.instance.screenRedirect()
-        ),
+      Get.off(
+        () => SuccessScreen(
+            image: TImages.successfulPaymentIcon,
+            title: TTexts.yourAccountCreatedTitle,
+            subTitle: TTexts.yourAccountCreatedSubTitle,
+            onPressed: () =>
+                AuthenticationRepository.instance.screenRedirect()),
       );
     }
   }

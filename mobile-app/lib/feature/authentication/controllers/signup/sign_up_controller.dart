@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tranquilestate/data/repositories/authentication/authentication_repository.dart';
-import 'package:tranquilestate/data/repositories/user/user_model.dart';
+import 'package:tranquilestate/feature/perosanilzation/models/user_model.dart';
 import 'package:tranquilestate/data/repositories/user/user_repository.dart';
 import 'package:tranquilestate/feature/authentication/screens/signup/verify_email.dart';
 import 'package:tranquilestate/utils/constants/image_strings.dart';
@@ -26,7 +26,6 @@ class SignUpController extends GetxController {
   /// Signup
   void signup() async {
     try {
-
       /// Start Loading
       TFullScreenLoader.openLoadingDialog(
           '私たちはあなたの情報を処理しています...', TImages.docerAnimation);
@@ -56,7 +55,9 @@ class SignUpController extends GetxController {
       }
 
       /// Register user in the Firebase Authentication & Save ser data in the firebase
-      final userCredential =  await AuthenticationRepository.instance.registerWithEmailAndPassword(email.text.trim(), password.text.trim());
+      final userCredential = await AuthenticationRepository.instance
+          .registerWithEmailAndPassword(
+              email.text.trim(), password.text.trim());
 
       /// Save Authenticated user data in the Firebase Firestore
       final newUser = UserModel(
@@ -68,7 +69,7 @@ class SignUpController extends GetxController {
         phoneNumber: phoneNumber.text.trim(),
         profilePicture: '',
       );
-      final userRepository  = Get.put(UserRepository());
+      final userRepository = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
 
       /// Stop Loading
@@ -78,10 +79,8 @@ class SignUpController extends GetxController {
       TLoaders.successSnackBar(title: 'おめでとう', message: 'アカウントが作成されました!続行するには電子メールを確認してください。');
 
       /// Move to verify email screen
-      Get.to(() => const VerifyEmailScreen());
-
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
-
       /// Stop Loading
       TFullScreenLoader.stopLoading();
 

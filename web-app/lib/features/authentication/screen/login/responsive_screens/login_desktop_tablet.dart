@@ -8,7 +8,7 @@ class LoginScreenDesktopTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TLoginTemplate(
+    return TLoginTemplate(
       child: Column(
         children: [
           TLoginHeader(),
